@@ -1,0 +1,17 @@
+{
+  "name": "tutorial-project",
+  "version": "1.0.0",
+  "description": "使用Solo Trae Web Code制作的网页教程项目",
+  "main": "index.html",
+  "scripts": {
+    "start": "echo \"Project started\"",
+    "build": "echo \"Project built\""
+  },
+  "keywords": [
+    "tutorial",
+    "web",
+    "solo trae"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
