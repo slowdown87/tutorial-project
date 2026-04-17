@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实施指南</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1, h2, h3, h4 {
+            color: #667eea;
+        }
+        a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul, ol {
+            margin-left: 20px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 5px 10px;
+            background: #f0f0f0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../index.html" class="back-link">返回教程目录</a>
+        <h1>实施指南</h1>
+<p></p>
+<h2>1. 工具准备</h2>
+<p></p>
+<h3>必要工具</h3>
+<p></p>
+<p>1. **Git**</p>
+<p>   - 下载地址: <a href="https://git-scm.com/downloads">Git官网</a></p>
+<p>   - 安装完成后，在终端中验证：</p>
+<p>     ```bash</p>
+<p>     git --version</p>
+<p>     ```</p>
+<p></p>
+<p>2. **GitHub账号**</p>
+<p>   - 注册地址: <a href="https://github.com/join">GitHub</a></p>
+<p>   - 确保已完成邮箱验证</p>
+<p></p>
+<p>3. **代码编辑器**</p>
+<p>   - **VS Code** (推荐): <a href="https://code.visualstudio.com/download">下载</a></p>
+<p>   - 推荐插件:</p>
+<p>     - Markdown All in One</p>
+<p>     - GitLens</p>
+<p>     - Live Server</p>
+<p></p>
+<p>4. **截图工具**</p>
+<p>   - **Windows**: Win+Shift+S (系统自带)</p>
+<p>   - **Mac**: Cmd+Shift+4 (系统自带)</p>
+<p>   - **跨平台**: <a href="https://getgreenshot.org/">Greenshot</a> (免费)</p>
+<p></p>
+<p>5. **浏览器**</p>
+<p>   - Chrome 或 Firefox 最新版本</p>
+<p></p>
+<h3>可选工具</h3>
+<p></p>
+<p>1. **GitHub Desktop**</p>
+<p>   - 下载地址: <a href="https://desktop.github.com/">GitHub Desktop</a></p>
+<p>   - 图形化Git客户端，适合新手</p>
+<p></p>
+<p>2. **Obsidian**</p>
+<p>   - 下载地址: <a href="https://obsidian.md/">Obsidian</a></p>
+<p>   - 强大的Markdown编辑器，支持知识管理</p>
+<p></p>
+<p>3. **OBS Studio**</p>
+<p>   - 下载地址: <a href="https://obsproject.com/">OBS Studio</a></p>
+<p>   - 用于屏幕录制，制作教程视频</p>
+<p></p>
+<p>4. **Static Site Generator**</p>
+<p>   - **Jekyll**: `gem install jekyll`</p>
+<p>   - **Hugo**: <a href="https://gohugo.io/getting-started/install/">下载</a></p>
+<p>   - 用于生成更专业的教程网站</p>
+<p></p>
+<h2>2. 项目初始化</h2>
+<p></p>
+<h3>步骤1: 创建本地项目结构</h3>
+<p></p>
+<p>```bash</p>
+<h1>创建项目目录</h1>
+<p>mkdir -p tutorial-project/{project,docs/images}</p>
+<p></p>
+<h1>进入项目目录</h1>
+<p>cd tutorial-project</p>
+<p></p>
+<h1>初始化Git仓库</h1>
+<p>git init</p>
+<p></p>
+<h1>创建.gitignore文件</h1>
+<p>echo "# 忽略文件\nnode_modules/\n.DS_Store\n*.log\n" > .gitignore</p>
+<p></p>
+<h1>创建README.md</h1>
+<p>echo "# GitHub Pages教程\n\n这是一个关于如何使用GitHub发布网页的教程项目。" > README.md</p>
+<p></p>
+<h1>创建项目文件</h1>
+<p>mkdir -p project/{css,js,assets}</p>
+<p>touch project/index.html</p>
+<p></p>
+<h1>创建教程文档</h1>
+<p>touch docs/index.md</p>
+<p>```</p>
+<p></p>
+<h3>步骤2: 配置GitHub仓库</h3>
+<p></p>
+<p>1. 登录GitHub，创建新仓库</p>
+<p>2. 将本地仓库与远程仓库关联：</p>
+<p>   ```bash</p>
+<p>   git remote add origin <仓库链接></p>
+<p>   git push -u origin main</p>
+<p>   ```</p>
+<p></p>
+<h3>步骤3: 配置GitHub Pages</h3>
+<p></p>
+<p>1. 进入GitHub仓库设置</p>
+<p>2. 开启GitHub Pages，选择main分支和/docs目录</p>
+<p>3. 保存设置</p>
+<p></p>
+<h2>3. 同步教程生成流程</h2>
+<p></p>
+<h3>标准工作流程</h3>
+<p></p>
+<p>1. **开始新步骤**</p>
+<p>   - 在`docs`目录中创建新的步骤文件，如`step1.md`</p>
+<p>   - 按照模板结构编写步骤内容</p>
+<p></p>
+<p>2. **执行项目操作**</p>
+<p>   - 在`project`目录中执行实际操作</p>
+<p>   - 例如，创建HTML文件、编写CSS样式等</p>
+<p></p>
+<p>3. **记录操作步骤**</p>
+<p>   - 在教程文件中实时记录每一步操作</p>
+<p>   - 包括命令、点击操作、配置更改等</p>
+<p></p>
+<p>4. **捕获截图**</p>
+<p>   - 对关键操作进行截图</p>
+<p>   - 将截图保存到`docs/images`目录</p>
+<p>   - 在教程中引用截图</p>
+<p></p>
+<p>5. **保存代码片段**</p>
+<p>   - 在教程中添加相关代码片段</p>
+<p>   - 确保代码与实际项目文件一致</p>
+<p></p>
+<p>6. **提交更新**</p>
+<p>   - 同时提交项目代码和教程文档</p>
+<p>   - 使用清晰的提交信息</p>
+<p>   ```bash</p>
+<p>   git add .</p>
+<p>   git commit -m "[docs]: 完成步骤1：创建基本项目结构"</p>
+<p>   git push</p>
+<p>   ```</p>
+<p></p>
+<h3>示例工作流</h3>
+<p></p>
+<p>#### 步骤1: 创建基本HTML结构</p>
+<p></p>
+<p>1. **项目操作**:</p>
+<p>   - 编辑 `project/index.html`</p>
+<p>   - 添加基本HTML结构</p>
+<p></p>
+<p>2. **教程记录**:</p>
+<p>   - 编辑 `docs/step1.md`</p>
+<p>   - 记录操作步骤</p>
+<p>   - 添加截图</p>
+<p>   - 包含代码示例</p>
+<p></p>
+<p>3. **提交更新**:</p>
+<p>   ```bash</p>
+<p>   git add project/index.html docs/step1.md docs/images/step1-*.png</p>
+<p>   git commit -m "[docs]: 完成步骤1：创建基本HTML结构"</p>
+<p>   git push</p>
+<p>   ```</p>
+<p></p>
+<h2>4. 工具使用建议</h2>
+<p></p>
+<h3>VS Code使用技巧</h3>
+<p></p>
+<p>1. **分屏编辑**</p>
+<p>   - 同时打开项目文件和教程文件</p>
+<p>   - 使用`Ctrl+\` (Windows) 或 `Cmd+\` (Mac) 分屏</p>
+<p></p>
+<p>2. **Markdown预览**</p>
+<p>   - 按 `Ctrl+Shift+V` (Windows) 或 `Cmd+Shift+V` (Mac) 预览Markdown</p>
+<p></p>
+<p>3. **Git集成**</p>
+<p>   - 使用VS Code的Git面板查看更改</p>
+<p>   - 直接在编辑器中提交和推送</p>
+<p></p>
+<h3>截图技巧</h3>
+<p></p>
+<p>1. **命名规范**</p>
+<p>   - 使用 `stepX-actionY-description.png` 格式</p>
+<p>   - 例如: `step1-action1-create-html.png`</p>
+<p></p>
+<p>2. **截图质量**</p>
+<p>   - 确保截图清晰可见</p>
+<p>   - 突出显示关键操作区域</p>
+<p>   - 避免包含敏感信息</p>
+<p></p>
+<p>3. **图片优化**</p>
+<p>   - 使用在线工具压缩图片大小</p>
+<p>   - 推荐: <a href="https://tinypng.com/">TinyPNG</a></p>
+<p></p>
+<h3>Markdown写作技巧</h3>
+<p></p>
+<p>1. **结构清晰**</p>
+<p>   - 使用标题层级组织内容</p>
+<p>   - 适当使用列表和表格</p>
+<p></p>
+<p>2. **代码展示**</p>
+<p>   - 使用代码块，指定语言</p>
+<p>   - 关键代码添加注释</p>
+<p></p>
+<p>3. **链接和引用**</p>
+<p>   - 使用相对路径引用图片和文件</p>
+<p>   - 添加内部链接，方便导航</p>
+<p></p>
+<h2>5. 常见问题及解决方案</h2>
+<p></p>
+<h3>1. 教程与代码不同步</h3>
+<p></p>
+<p>**问题**: 教程内容与实际代码不一致</p>
+<p></p>
+<p>**解决方案**:</p>
+<ul><li>采用实时更新策略，操作完成后立即更新教程</li>
+<li>使用Git提交信息关联代码和教程变更</li>
+<li>定期检查教程内容与代码的一致性</li>
+<p></p>
+<h3>2. 图片引用错误</h3>
+<p></p>
+<p>**问题**: 教程中的图片无法显示</p>
+<p></p>
+<p>**解决方案**:</p>
+<li>使用相对路径引用图片</li>
+<li>确保图片文件已提交到仓库</li>
+<li>检查图片文件名大小写是否正确</li>
+<p></p>
+<h3>3. GitHub Pages部署失败</h3>
+<p></p>
+<p>**问题**: 网站无法正常部署</p>
+<p></p>
+<p>**解决方案**:</p>
+<li>检查仓库设置是否正确</li>
+<li>确保docs目录存在且包含index.html或index.md</li>
+<li>查看GitHub Actions日志，了解具体错误</li>
+<p></p>
+<h3>4. 同步效率低下</h3>
+<p></p>
+<p>**问题**: 手动同步教程和代码耗时较长</p>
+<p></p>
+<p>**解决方案**:</p>
+<li>使用自动化工具，如GitHub Actions</li>
+<li>建立标准化的工作流程</li>
+<li>合理安排工作时间，批量处理相似任务</li>
+<p></p>
+<h2>6. 高级技巧</h2>
+<p></p>
+<h3>1. 使用模板</h3>
+<p></p>
+<p>创建教程模板，包含固定的结构和格式，提高编写效率：</p>
+<p></p>
+<p>```markdown</p>
+<h1>步骤X: 标题</h1>
+<p></p>
+<h2>目标</h2>
+<li>目标1</li>
+<li>目标2</li>
+<p></p>
+<h2>操作步骤</h2>
+<p>1. **操作1**:</p>
+<p>   - 子步骤1</p>
+<p>   - 子步骤2</p>
+<p>   - 截图: `images/stepX-action1.png`</p>
+<p></p>
+<h2>代码示例</h2>
+<p>```html</p>
+<p><!-- 代码 --></p>
+<p>```</p>
+<p></p>
+<h2>注意事项</h2>
+<li>注意事项1</li>
+<li>注意事项2</li>
+<p></p>
+<h2>验证</h2>
+<li>验证方法</li>
+<p>```</p>
+<p></p>
+<h3>2. 自动化构建</h3>
+<p></p>
+<p>使用GitHub Actions自动构建和部署教程网站：</p>
+<p></p>
+<p>```yaml</p>
+<p>name: Build and Deploy</p>
+<p></p>
+<p>on:</p>
+<p>  push:</p>
+<p>    branches: [ main ]</p>
+<p></p>
+<p>jobs:</p>
+<p>  build:</p>
+<p>    runs-on: ubuntu-latest</p>
+<p>    steps:</p>
+<p>    - uses: actions/checkout@v2</p>
+<p>    - name: Build</p>
+<p>      run: |</p>
+<p>        # 构建命令</p>
+<p>    - name: Deploy</p>
+<p>      uses: peaceiris/actions-gh-pages@v3</p>
+<p>      with:</p>
+<p>        github_token: ${{ secrets.GITHUB_TOKEN }}</p>
+<p>        publish_dir: ./docs</p>
+<p>```</p>
+<p></p>
+<h3>3. 版本控制策略</h3>
+<p></p>
+<li>使用Git标签标记教程的重要版本</li>
+<li>创建发布分支，用于稳定版本</li>
+<li>维护CHANGELOG，记录教程的主要变更</li>
+<p></p>
+<h2>7. 资源链接</h2>
+<p></p>
+<h3>学习资源</h3>
+<p></p>
+<p>1. **GitHub Pages文档**</p>
+<p>   - <a href="https://docs.github.com/en/pages">GitHub Pages官方文档</a></p>
+<p></p>
+<p>2. **Markdown指南**</p>
+<p>   - <a href="https://www.markdownguide.org/">Markdown官方文档</a></p>
+<p></p>
+<p>3. **Git教程**</p>
+<p>   - <a href="https://git-scm.com/doc">Git官方文档</a></p>
+<p>   - <a href="https://docs.github.com/en/get-started/using-git">GitHub Git教程</a></p>
+<p></p>
+<h3>工具资源</h3>
+<p></p>
+<p>1. **静态网站生成器**</p>
+<p>   - <a href="https://jekyllrb.com/">Jekyll</a></p>
+<p>   - <a href="https://gohugo.io/">Hugo</a></p>
+<p>   - <a href="https://www.gatsbyjs.com/">Gatsby</a></p>
+<p></p>
+<p>2. **Markdown编辑器**</p>
+<p>   - <a href="https://code.visualstudio.com/">VS Code</a></p>
+<p>   - <a href="https://typora.io/">Typora</a></p>
+<p>   - <a href="https://obsidian.md/">Obsidian</a></p>
+<p></p>
+<p>3. **截图和录屏工具**</p>
+<p>   - <a href="https://getgreenshot.org/">Greenshot</a></p>
+<p>   - <a href="https://obsproject.com/">OBS Studio</a></p>
+<p>   - <a href="https://www.loom.com/">Loom</a></p>
+<p></p>
+<h2>8. 实施检查清单</h2>
+<p></p>
+<h3>前期准备</h3>
+<li>[ ] 安装并配置Git</li>
+<li>[ ] 创建GitHub账号</li>
+<li>[ ] 安装代码编辑器</li>
+<li>[ ] 准备截图工具</li>
+<p></p>
+<h3>项目初始化</h3>
+<li>[ ] 创建本地项目结构</li>
+<li>[ ] 初始化Git仓库</li>
+<li>[ ] 创建GitHub远程仓库</li>
+<li>[ ] 配置GitHub Pages</li>
+<p></p>
+<h3>同步教程生成</h3>
+<li>[ ] 创建教程模板</li>
+<li>[ ] 执行项目操作</li>
+<li>[ ] 实时记录操作步骤</li>
+<li>[ ] 捕获关键截图</li>
+<li>[ ] 保存代码片段</li>
+<li>[ ] 提交更新</li>
+<p></p>
+<h3>发布和维护</h3>
+<li>[ ] 部署到GitHub Pages</li>
+<li>[ ] 验证网站访问</li>
+<li>[ ] 定期更新教程内容</li>
+<li>[ ] 收集用户反馈</li>
+<p></p>
+<h2>9. 实施节奏</h2>
+<p></p>
+<p>根据用户要求，我们将采用以下实施节奏：</p>
+<p></p>
+<h3>实施步骤</h3>
+<p></p>
+<p>1. **编写一节教程内容**</p>
+<p>   - 按照章节顺序编写教程的一个小节</p>
+<p>   - 确保内容系统、完整、有细节</p>
+<p>   - 包含实际操作步骤和代码示例</p>
+<p></p>
+<p>2. **停止并等待用户反馈**</p>
+<p>   - 完成一节教程后，停止工作</p>
+<p>   - 等待用户的反馈和确认</p>
+<p>   - 根据用户反馈调整教程内容</p>
+<p></p>
+<p>3. **按照教程内容实际操作项目**</p>
+<p>   - 根据编写的教程内容，实际操作项目</p>
+<p>   - 记录操作过程中的问题和解决方案</p>
+<p>   - 确保教程内容与实际操作一致</p>
+<p></p>
+<p>4. **再次停止并等待用户反馈**</p>
+<p>   - 完成项目操作后，停止工作</p>
+<p>   - 等待用户的反馈和确认</p>
+<p>   - 根据用户反馈调整项目操作</p>
+<p></p>
+<p>5. **继续编写下一节教程内容**</p>
+<p>   - 基于用户反馈，继续编写下一节教程</p>
+<p>   - 保持教程内容的连贯性和系统性</p>
+<p>   - 确保每节教程都有明确的目标和内容</p>
+<p></p>
+<p>6. **重复步骤2-5**</p>
+<p>   - 按照上述节奏，直到完成所有教程内容</p>
+<p>   - 确保每一步都得到用户的反馈和确认</p>
+<p>   - 保持教程内容与项目操作的同步</p>
+<p></p>
+<h3>节奏特点</h3>
+<p></p>
+<li>**小步慢走**：每完成一个小任务就停止，等待反馈</li>
+<li>**同步进行**：教程编写和项目操作同步进行</li>
+<li>**用户主导**：根据用户反馈调整内容和进度</li>
+<li>**质量优先**：确保每节教程内容的质量和准确性</li></ul>
+<p></p>
+<h2>10. 总结</h2>
+<p></p>
+<p>通过本实施指南，你可以：</p>
+<p></p>
+<p>1. **实时同步**：在制作项目的同时生成教程</p>
+<p>2. **结构清晰**：按照标准化的结构组织教程内容</p>
+<p>3. **内容完整**：包含操作步骤、截图和代码示例</p>
+<p>4. **易于维护**：使用版本控制和自动化工具</p>
+<p>5. **专业发布**：通过cnb.cool发布教程网站</p>
+<p>6. **用户主导**：按照用户要求的节奏进行实施</p>
+<p></p>
+<p>遵循本指南，你将能够创建一个系统、详细且与项目同步的教程，帮助他人学习如何使用Solo Trae Web Code制作网页并发布到网上。</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4.5 项目部署与维护</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1, h2, h3, h4 {
+            color: #667eea;
+        }
+        a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul, ol {
+            margin-left: 20px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 5px 10px;
+            background: #f0f0f0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../index.html" class="back-link">返回教程目录</a>
+        <h1>4.5 项目部署与维护</h1>
+<p></p>
+<h2>目标</h2>
+<p></p>
+<p>在本节中，你将：</p>
+<ul><li>学习如何维护和更新GitHub Pages部署</li>
+<li>掌握如何绑定自定义域名</li>
+<li>了解如何监控和优化网站性能</li>
+<li>学会处理常见的部署问题</li>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>步骤1：更新网站内容</h2>
+<p></p>
+<p>当你修改了项目文件后，需要更新GitHub Pages上的内容。</p>
+<p></p>
+<h3>操作步骤：</h3>
+<p></p>
+<p>1. **修改文件**</p>
+<p>   - 编辑项目中的文件，比如更新HTML内容、CSS样式或JavaScript功能</p>
+<p></p>
+<p>2. **提交更改**</p>
+<p>   ```bash</p>
+<p>   git add .</p>
+<p>   git commit -m "更新网站内容"</p>
+<p>   git push github main</p>
+<p>   ```</p>
+<p></p>
+<p>3. **等待自动部署**</p>
+<p>   - GitHub Pages会自动检测到代码变更并开始部署</p>
+<p>   - 部署通常需要1-10分钟</p>
+<p></p>
+<p>4. **验证更新**</p>
+<p>   - 访问GitHub Pages地址</p>
+<p>   - 确认网站已更新</p>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>步骤2：绑定自定义域名</h2>
+<p></p>
+<p>为了让网站看起来更专业，你可以绑定自己的域名。</p>
+<p></p>
+<h3>操作步骤：</h3>
+<p></p>
+<p>1. **准备域名**</p>
+<p>   - 购买一个域名（例如从阿里云、腾讯云、GoDaddy等）</p>
+<p>   - 确保域名已经完成备案（如果是国内域名）</p>
+<p></p>
+<p>2. **配置GitHub Pages**</p>
+<p>   - 进入GitHub仓库的Settings页面</p>
+<p>   - 找到Pages设置</p>
+<p>   - 在「Custom domain」字段中输入你的域名</p>
+<p>   - 点击「Save」</p>
+<p></p>
+<p>3. **配置DNS记录**</p>
+<p>   - 登录你的域名提供商后台</p>
+<p>   - 添加CNAME记录：</p>
+<p>     - 主机记录：`www`（或其他子域名）</p>
+<p>     - 记录类型：`CNAME`</p>
+<p>     - 记录值：`slowdown87.github.io`</p>
+<p>   - 保存DNS配置</p>
+<p></p>
+<p>4. **验证域名**</p>
+<p>   - 等待DNS生效（通常需要5-30分钟）</p>
+<p>   - 访问你的自定义域名</p>
+<p>   - 确认网站可以正常访问</p>
+<p></p>
+<p>5. **启用HTTPS**</p>
+<p>   - 在GitHub Pages设置中，勾选「Enforce HTTPS」</p>
+<p>   - 等待GitHub为你的域名生成SSL证书</p>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>步骤3：监控网站性能</h2>
+<p></p>
+<p>定期监控网站性能，确保网站访问流畅。</p>
+<p></p>
+<h3>操作步骤：</h3>
+<p></p>
+<p>1. **使用性能分析工具**</p>
+<p>   - **Google PageSpeed Insights**：分析网站性能</p>
+<p>   - **GTmetrix**：详细的性能分析报告</p>
+<p>   - **Pingdom**：网站可用性监控</p>
+<p></p>
+<p>2. **检查加载速度**</p>
+<p>   - 测试不同地区的访问速度</p>
+<p>   - 分析页面加载时间</p>
+<p>   - 识别性能瓶颈</p>
+<p></p>
+<p>3. **优化网站**</p>
+<p>   - 压缩图片和静态资源</p>
+<p>   - 启用浏览器缓存</p>
+<p>   - 减少HTTP请求</p>
+<p>   - 使用CDN加速</p>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>步骤4：常见问题处理</h2>
+<p></p>
+<h3>4.1 部署失败</h3>
+<p></p>
+<p>**症状**：GitHub Pages显示部署失败</p>
+<p></p>
+<p>**解决方案**：</p>
+<li>检查GitHub Actions日志，了解具体错误</li>
+<li>确认构建目录设置正确</li>
+<li>检查是否有语法错误或缺失文件</li>
+<li>确保index.html文件存在</li>
+<p></p>
+<h3>4.2 网站无法访问</h3>
+<p></p>
+<p>**症状**：访问GitHub Pages地址显示404错误</p>
+<p></p>
+<p>**解决方案**：</p>
+<li>确认部署已完成</li>
+<li>检查GitHub Pages设置中的部署分支和目录</li>
+<li>确认index.html文件位于正确位置</li>
+<li>清除浏览器缓存后重试</li>
+<p></p>
+<h3>4.3 自定义域名不生效</h3>
+<p></p>
+<p>**症状**：自定义域名无法访问网站</p>
+<p></p>
+<p>**解决方案**：</p>
+<li>检查DNS配置是否正确</li>
+<li>等待DNS缓存刷新（可能需要24-48小时）</li>
+<li>确认GitHub Pages中的自定义域名设置正确</li>
+<li>使用DNS检查工具验证DNS记录</li>
+<p></p>
+<h3>4.4 网站加载慢</h3>
+<p></p>
+<p>**症状**：网站加载时间过长</p>
+<p></p>
+<p>**解决方案**：</p>
+<li>压缩图片和静态资源</li>
+<li>减少JavaScript和CSS文件大小</li>
+<li>使用CDN加速</li>
+<li>优化代码，减少不必要的资源加载</li>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>实际部署示例</h2>
+<p></p>
+<p>我们的项目已成功部署到：</p>
+<li>**GitHub仓库**：<a href="https://github.com/slowdown87/tutorial-project">https://github.com/slowdown87/tutorial-project</a></li>
+<li>**GitHub Pages地址**：`https://slowdown87.github.io/tutorial-project/`</li>
+<li>**访问方式**：直接在浏览器中打开上述地址</li>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>部署维护最佳实践</h2>
+<p></p>
+<h3>1. 代码管理</h3>
+<li>📝 **规范提交信息**：使用清晰、一致的提交信息格式</li>
+<li>🏷️ **版本标签**：为重要版本创建标签</li>
+<li>🌿 **分支策略**：使用分支开发新功能，合并到主分支后部署</li>
+<li>📋 **代码审查**：重要更改进行代码审查</li>
+<p></p>
+<h3>2. 部署管理</h3>
+<li>⏰ **定期更新**：定期更新依赖和工具</li>
+<li>📊 **监控**：定期检查网站性能和访问情况</li>
+<li>🔄 **备份**：定期备份网站代码和数据</li>
+<li>📱 **多设备测试**：在不同设备和浏览器上测试网站</li>
+<p></p>
+<h3>3. 安全管理</h3>
+<li>🔒 **保护访问令牌**：不要将个人访问令牌提交到代码仓库</li>
+<li>🧹 **清理敏感信息**：确保代码中不包含敏感数据</li>
+<li>📈 **监控异常**：定期检查网站访问日志，发现异常访问</li>
+<li>🔄 **更新依赖**：定期更新依赖包，修复安全漏洞</li></ul>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>常见问题与解答</h2>
+<p></p>
+<h3>Q: GitHub Pages部署需要多长时间？</h3>
+<p>**A:** 通常需要1-10分钟，复杂项目可能需要更长时间。</p>
+<p></p>
+<h3>Q: 可以部署动态网站吗？</h3>
+<p>**A:** GitHub Pages只支持静态网站，不支持服务器端脚本（如PHP、Python等）。</p>
+<p></p>
+<h3>Q: 有存储限制吗？</h3>
+<p>**A:** GitHub Pages对存储空间没有严格限制，但建议保持仓库大小在1GB以下。</p>
+<p></p>
+<h3>Q: 可以使用自定义主题吗？</h3>
+<p>**A:** 是的，你可以使用任何静态网站主题，包括Jekyll、Hugo、Hexo等生成的网站。</p>
+<p></p>
+<h3>Q: 如何查看部署历史？</h3>
+<p>**A:** 在GitHub仓库的Actions页面，可以查看所有部署历史和日志。</p>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>练习时间！</h2>
+<p></p>
+<h3>练习1：更新网站内容</h3>
+<p>1. 修改项目中的index.html文件，添加一个新的段落</p>
+<p>2. 提交并推送更改</p>
+<p>3. 等待GitHub Pages部署完成</p>
+<p>4. 验证网站已更新</p>
+<p></p>
+<h3>练习2：绑定自定义域名（可选）</h3>
+<p>1. 准备一个域名</p>
+<p>2. 在GitHub Pages设置中添加自定义域名</p>
+<p>3. 配置DNS记录</p>
+<p>4. 验证域名是否生效</p>
+<p></p>
+<h3>练习3：监控网站性能</h3>
+<p>1. 使用Google PageSpeed Insights分析网站性能</p>
+<p>2. 查看性能报告</p>
+<p>3. 实施至少一项性能优化</p>
+<p>4. 验证优化效果</p>
+<p></p>
+<h3>练习4：处理部署问题</h3>
+<p>1. 故意修改一个文件导致部署失败</p>
+<p>2. 查看GitHub Actions日志</p>
+<p>3. 修复问题并重新部署</p>
+<p>4. 确认部署成功</p>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>总结</h2>
+<p></p>
+<p>在本节中，你学会了：</p>
+<p></p>
+<p>✅ 如何更新GitHub Pages部署</p>
+<p>✅ 如何绑定自定义域名</p>
+<p>✅ 如何监控和优化网站性能</p>
+<p>✅ 如何处理常见的部署问题</p>
+<p>✅ 部署维护的最佳实践</p>
+<p></p>
+<p>**恭喜你！你已经掌握了GitHub Pages的完整部署和维护流程！**</p>
+<p></p>
+<p>---</p>
+<p></p>
+<p>**下一步**：让我们进入<a href="../chapter05/section01.md">第5章：同步教程生成机制</a>，学习如何在制作项目的同时同步生成教程！</p>
+<p></p>
+    </div>
+</body>
+</html>

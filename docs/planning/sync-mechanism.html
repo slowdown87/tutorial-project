@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>教程与项目同步机制</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1, h2, h3, h4 {
+            color: #667eea;
+        }
+        a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul, ol {
+            margin-left: 20px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 5px 10px;
+            background: #f0f0f0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../index.html" class="back-link">返回教程目录</a>
+        <h1>教程与项目同步机制</h1>
+<p></p>
+<h2>1. 目录结构同步</h2>
+<p></p>
+<h3>项目与教程的目录结构</h3>
+<p></p>
+<p>```</p>
+<p>tutorial-project/</p>
+<p>├── .git/                  # Git版本控制</p>
+<p>├── project/               # 实际项目代码</p>
+<p>│   ├── index.html</p>
+<p>│   ├── css/</p>
+<p>│   ├── js/</p>
+<p>│   └── assets/</p>
+<p>├── docs/                  # 教程文档</p>
+<p>│   ├── index.md           # 教程首页</p>
+<p>│   ├── step1.md           # 步骤1</p>
+<p>│   ├── step2.md           # 步骤2</p>
+<p>│   └── images/            # 教程截图</p>
+<p>├── README.md              # 项目说明</p>
+<p>└── .github/               # GitHub配置</p>
+<p>    └── workflows/         # GitHub Actions工作流</p>
+<p>```</p>
+<p></p>
+<h3>同步策略</h3>
+<ul><li>**平行结构**: 教程文档与项目代码保持平行结构</li>
+<li>**对应关系**: 每个项目文件对应教程中的相关章节</li>
+<li>**引用关系**: 教程中通过相对路径引用项目文件</li>
+<p></p>
+<h2>2. 版本控制策略</h2>
+<p></p>
+<h3>Git分支管理</h3>
+<li>**main分支**: 存放最终的项目代码和教程</li>
+<li>**dev分支**: 用于开发过程中的同步更新</li>
+<li>**feature分支**: 用于特定功能的开发和教程编写</li>
+<p></p>
+<h3>提交规范</h3>
+<p>```</p>
+<p>[类型]: [描述]</p>
+<p></p>
+<p>[详细说明]</p>
+<p></p>
+<p>[相关文件]</p>
+<p>```</p>
+<p></p>
+<p>类型包括:</p>
+<li>feat: 新功能</li>
+<li>fix: 修复bug</li>
+<li>docs: 文档更新</li>
+<li>style: 代码风格</li>
+<li>refactor: 代码重构</li>
+<li>test: 测试</li>
+<li>chore: 构建/依赖</li>
+<p></p>
+<h3>同步提交</h3>
+<li>项目代码和教程文档在同一个提交中更新</li>
+<li>确保每次提交都包含相关的代码和文档变更</li>
+<li>使用有意义的提交信息，说明变更内容</li>
+<p></p>
+<h2>3. 内容更新机制</h2>
+<p></p>
+<h3>实时更新流程</h3>
+<p>1. **操作执行**: 在项目中执行操作</p>
+<p>2. **内容记录**: 立即记录到教程文档中</p>
+<p>3. **截图添加**: 插入相关截图</p>
+<p>4. **代码引用**: 添加代码片段或引用</p>
+<p>5. **提交更新**: 提交变更到版本控制系统</p>
+<p></p>
+<h3>内容关联</h3>
+<li>**文件关联**: 教程中的每个步骤关联到项目中的具体文件</li>
+<li>**版本关联**: 教程内容关联到特定的代码版本</li>
+<li>**时间关联**: 记录操作和教程更新的时间戳</li>
+<p></p>
+<h3>变更追踪</h3>
+<li>使用Git diff查看变更历史</li>
+<li>保持教程内容与代码的一致性</li>
+<li>定期检查教程内容是否与最新代码匹配</li>
+<p></p>
+<h2>4. 同步工具和流程</h2>
+<p></p>
+<h3>推荐工具</h3>
+<p>1. **Git客户端**</p>
+<p>   - GitHub Desktop</p>
+<p>   - GitKraken</p>
+<p>   - SourceTree</p>
+<p></p>
+<p>2. **文档编辑器**</p>
+<p>   - VS Code (带Markdown插件)</p>
+<p>   - Typora</p>
+<p>   - Obsidian</p>
+<p></p>
+<p>3. **同步工具**</p>
+<p>   - rsync (文件同步)</p>
+<p>   - inotify-tools (文件变更监控)</p>
+<p>   - GitHub Actions (自动化同步)</p>
+<p></p>
+<h3>工作流程</h3>
+<p></p>
+<p>```</p>
+<p>┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐</p>
+<p>│  项目操作执行   │────>│  教程内容更新   │────>│  版本控制提交   │</p>
+<p>└─────────────────┘     └─────────────────┘     └─────────────────┘</p>
+<p>          ↑                      ↑                      ↑</p>
+<p>          └──────────────────────┘──────────────────────┘</p>
+<p>```</p>
+<p></p>
+<h2>5. 冲突处理</h2>
+<p></p>
+<h3>常见冲突</h3>
+<li>代码变更与教程描述不一致</li>
+<li>目录结构变更导致教程中的路径失效</li>
+<li>功能调整导致教程步骤过时</li>
+<p></p>
+<h3>解决策略</h3>
+<li>**定期同步**: 频繁提交，减少冲突</li>
+<li>**冲突检测**: 使用工具检测教程与代码的不一致</li>
+<li>**更新策略**: 优先更新代码，然后同步更新教程</li>
+<li>**版本标记**: 为教程添加版本标记，对应代码版本</li>
+<p></p>
+<h2>6. 自动化同步方案</h2>
+<p></p>
+<h3>GitHub Actions工作流</h3>
+<p></p>
+<p>```yaml</p>
+<p>name: Sync Tutorial</p>
+<p></p>
+<p>on:</p>
+<p>  push:</p>
+<p>    branches: [ main, dev ]</p>
+<p>  pull_request:</p>
+<p>    branches: [ main ]</p>
+<p></p>
+<p>jobs:</p>
+<p>  sync:</p>
+<p>    runs-on: ubuntu-latest</p>
+<p>    steps:</p>
+<p>    - uses: actions/checkout@v2</p>
+<p>    </p>
+<p>    - name: Check tutorial links</p>
+<p>      run: |</p>
+<p>        # 检查教程中的文件引用是否存在</p>
+<p>        find docs -name "*.md" -exec grep -l "\<a href=".*">.*\</a>" {} \;</p>
+<p>        </p>
+<p>    - name: Build tutorial</p>
+<p>      run: |</p>
+<p>        # 构建教程网站</p>
+<p>        # 这里可以使用静态网站生成器</p>
+<p>        </p>
+<p>    - name: Deploy to GitHub Pages</p>
+<p>      if: github.ref == 'refs/heads/main'</p>
+<p>      uses: peaceiris/actions-gh-pages@v3</p>
+<p>      with:</p>
+<p>        github_token: ${{ secrets.GITHUB_TOKEN }}</p>
+<p>        publish_dir: ./docs</p>
+<p>```</p>
+<p></p>
+<h3>本地自动化</h3>
+<p></p>
+<p>1. **文件监控脚本**</p>
+<p>   - 监控项目文件变更</p>
+<p>   - 自动更新教程中的相关引用</p>
+<p></p>
+<p>2. **构建脚本**</p>
+<p>   - 自动生成教程网站</p>
+<p>   - 验证教程链接和资源</p>
+<p></p>
+<h2>7. 同步验证</h2>
+<p></p>
+<h3>验证方法</h3>
+<li>**链接检查**: 确保教程中的所有链接都有效</li>
+<li>**代码一致性**: 确保教程中的代码与实际代码一致</li>
+<li>**步骤可执行性**: 按照教程步骤重新执行，验证可复现性</li>
+<li>**视觉一致性**: 确保截图与实际界面一致</li>
+<p></p>
+<h3>验证工具</h3>
+<li>**linkchecker**: 检查链接有效性</li>
+<li>**markdownlint**: 检查Markdown格式</li>
+<li>**html-proofer**: 检查HTML有效性</li>
+<li>**selenium**: 自动化测试教程步骤</li>
+<p></p>
+<h2>8. 最佳实践</h2>
+<p></p>
+<h3>同步原则</h3>
+<li>**实时性**: 操作完成后立即更新教程</li>
+<li>**完整性**: 确保所有操作都被记录</li>
+<li>**准确性**: 确保教程内容与实际操作一致</li>
+<li>**可维护性**: 保持教程结构清晰，易于更新</li>
+<p></p>
+<h3>团队协作</h3>
+<li>**分工明确**: 明确项目开发和教程编写的职责</li>
+<li>**定期同步**: 团队成员定期同步进度</li>
+<li>**代码审查**: 同时审查代码和教程内容</li>
+<li>**反馈机制**: 建立教程反馈和改进机制</li></ul>
+    </div>
+</body>
+</html>

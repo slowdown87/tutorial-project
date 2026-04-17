@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5.2 目录结构设计</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1, h2, h3, h4 {
+            color: #667eea;
+        }
+        a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul, ol {
+            margin-left: 20px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 5px 10px;
+            background: #f0f0f0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../index.html" class="back-link">返回教程目录</a>
+        <h1>5.2 目录结构设计</h1>
+<p></p>
+<h2>目标</h2>
+<p></p>
+<p>在本节中，你将：</p>
+<ul><li>学习如何设计合理的目录结构</li>
+<li>掌握目录结构的组织原则</li>
+<li>了解不同类型文件的存放位置</li>
+<li>学会如何使用目录结构来组织教程内容</li>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>为什么目录结构很重要？</h2>
+<p></p>
+<p>一个良好的目录结构对于教程项目来说非常重要：</p>
+<p></p>
+<li>📁 **组织清晰**：便于查找和管理文件</li>
+<li>🎯 **逻辑合理**：反映项目的逻辑结构</li>
+<li>🔗 **链接稳定**：使用相对路径，确保链接的稳定性</li>
+<li>📱 **可维护性**：便于后续的维护和更新</li>
+<li>🌐 **可移植性**：在不同平台上都能正常工作</li>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>目录结构设计原则</h2>
+<p></p>
+<h3>1. 层次分明</h3>
+<li>**顶层目录**：项目的主要组成部分</li>
+<li>**子目录**：按照功能或类型分类</li>
+<li>**文件命名**：清晰、简洁、有意义</li>
+<p></p>
+<h3>2. 逻辑清晰</h3>
+<li>**功能分组**：相关功能的文件放在一起</li>
+<li>**类型分组**：相同类型的文件放在一起</li>
+<li>**时间顺序**：按照教程的章节顺序组织</li>
+<p></p>
+<h3>3. 命名规范</h3>
+<li>**使用小写**：目录和文件名使用小写</li>
+<li>**连字符连接**：使用连字符（-）连接单词</li>
+<li>**避免空格**：不使用空格，使用连字符代替</li>
+<li>**保持一致**：整个项目使用一致的命名风格</li>
+<p></p>
+<h3>4. 扩展性</h3>
+<li>**预留空间**：为未来的内容预留空间</li>
+<li>**模块化**：便于添加新的模块和内容</li>
+<li>**兼容性**：考虑不同平台的兼容性</li>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>我们的目录结构</h2>
+<p></p>
+<p>在本项目中，我们采用了以下目录结构：</p>
+<p></p>
+<p>```</p>
+<p>tutorial-project/</p>
+<p>├── docs/                  # 教程文档</p>
+<p>│   ├── chapter01/         # 第1章：初识Solo Trae Web版</p>
+<p>│   │   ├── section01-what-is-solo-trae.md</p>
+<p>│   │   ├── section02-environment-setup.md</p>
+<p>│   │   ├── section03-how-to-use-solo-trae.md</p>
+<p>│   │   └── section04-effective-ai-communication.md</p>
+<p>│   ├── chapter02/         # 第2章：需求分析与规划</p>
+<p>│   │   ├── section01-define-goals.md</p>
+<p>│   │   └── section02-domestic-alternative.md</p>
+<p>│   ├── chapter03/         # 第3章：项目初始化</p>
+<p>│   │   ├── section01-project-init.md</p>
+<p>│   │   └── section02-project-config.md</p>
+<p>│   ├── chapter04/         # 第4章：国内替代方案选择与配置</p>
+<p>│   │   ├── section01-why-domestic-alternative.md</p>
+<p>│   │   ├── section02-cnb-intro.md</p>
+<p>│   │   ├── section03-cnb-register-repo.md</p>
+<p>│   │   ├── section04-access-token-git.md</p>
+<p>│   │   └── section05-push-deploy.md</p>
+<p>│   ├── chapter05/         # 第5章：同步教程生成机制</p>
+<p>│   │   ├── section01-what-is-sync-tutorial.md</p>
+<p>│   │   ├── section02-directory-structure.md</p>
+<p>│   │   └── section03-git-workflow.md</p>
+<p>│   ├── appendix/          # 附录</p>
+<p>│   │   ├── ai-active-guidance-implementation.md</p>
+<p>│   │   ├── ai-active-guidance.md</p>
+<p>│   │   ├── ai-communication-template.md</p>
+<p>│   │   └── ai-templates-comparison.md</p>
+<p>│   ├── planning/          # 规划文件</p>
+<p>│   │   ├── README.md</p>
+<p>│   │   ├── capture-plan.md</p>
+<p>│   │   ├── github-publish.md</p>
+<p>│   │   ├── implementation-guide.md</p>
+<p>│   │   ├── structure.md</p>
+<p>│   │   └── sync-mechanism.md</p>
+<p>│   ├── china-alternatives.md</p>
+<p>│   └── index.md           # 教程主页</p>
+<p>├── project/               # 项目代码</p>
+<p>│   ├── css/               # CSS样式文件</p>
+<p>│   │   └── style.css</p>
+<p>│   ├── js/                # JavaScript文件</p>
+<p>│   │   └── script.js</p>
+<p>│   └── index.html         # 主HTML文件</p>
+<p>├── .gitignore             # Git忽略文件</p>
+<p>├── package.json           # 项目配置文件</p>
+<p>├── project.zip            # 项目打包文件</p>
+<p>└── README.md              # 项目说明文件</p>
+<p>```</p>
+<p></p>
+<h3>目录结构说明</h3>
+<p></p>
+<p>#### 1. docs/ 目录</p>
+<li>**用途**：存放教程文档</li>
+<li>**结构**：按照章节组织，每章一个子目录</li>
+<li>**文件**：每个小节一个Markdown文件</li>
+<li>**特点**：使用章节编号和文字说明，便于识别</li>
+<p></p>
+<p>#### 2. project/ 目录</p>
+<li>**用途**：存放项目代码</li>
+<li>**结构**：按照文件类型组织</li>
+<li>**文件**：HTML、CSS、JavaScript等项目文件</li>
+<li>**特点**：与教程内容对应，便于实践</li>
+<p></p>
+<p>#### 3. appendix/ 目录</p>
+<li>**用途**：存放附录内容</li>
+<li>**结构**：按照主题组织</li>
+<li>**文件**：各种辅助文档和模板</li>
+<li>**特点**：提供额外的参考资料</li>
+<p></p>
+<p>#### 4. planning/ 目录</p>
+<li>**用途**：存放项目规划文件</li>
+<li>**结构**：按照规划主题组织</li>
+<li>**文件**：各种规划文档</li>
+<li>**特点**：记录项目的规划过程</li>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>目录结构的最佳实践</h2>
+<p></p>
+<h3>1. 文档目录</h3>
+<li>**章节组织**：按照教程的章节顺序组织</li>
+<li>**小节命名**：使用 `sectionXX-描述.md` 的格式</li>
+<li>**层次清晰**：章节和小节的层次关系清晰</li>
+<li>**链接管理**：使用相对路径链接，确保链接的稳定性</li>
+<p></p>
+<h3>2. 项目目录</h3>
+<li>**功能分离**：按照功能分离文件</li>
+<li>**类型分离**：按照文件类型分离</li>
+<li>**结构合理**：反映项目的逻辑结构</li>
+<li>**易于维护**：便于后续的维护和更新</li>
+<p></p>
+<h3>3. 附录目录</h3>
+<li>**主题分类**：按照主题分类</li>
+<li>**内容完整**：提供完整的参考资料</li>
+<li>**格式一致**：保持与教程一致的格式</li>
+<li>**易于查找**：便于用户查找和使用</li>
+<p></p>
+<h3>4. 规划目录</h3>
+<li>**过程记录**：记录项目的规划过程</li>
+<li>**决策记录**：记录重要的决策过程</li>
+<li>**文档完整**：提供完整的规划文档</li>
+<li>**便于参考**：便于后续参考和回顾</li>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>如何设计自己的目录结构</h2>
+<p></p>
+<h3>步骤1：确定项目类型</h3>
+<li>根据项目的类型和规模，确定目录结构的复杂度</li>
+<li>小型项目可以简单一些，大型项目需要更详细的结构</li>
+<p></p>
+<h3>步骤2：分析内容需求</h3>
+<li>分析项目需要包含哪些内容</li>
+<li>确定需要哪些类型的文件和目录</li>
+<p></p>
+<h3>步骤3：设计层次结构</h3>
+<li>设计目录的层次结构</li>
+<li>确定顶层目录和子目录</li>
+<p></p>
+<h3>步骤4：制定命名规范</h3>
+<li>制定目录和文件的命名规范</li>
+<li>确保命名的一致性和可读性</li>
+<p></p>
+<h3>步骤5：验证和调整</h3>
+<li>验证目录结构的合理性</li>
+<li>根据实际情况进行调整</li>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>常见目录结构问题及解决方案</h2>
+<p></p>
+<h3>问题1：目录层次过深</h3>
+<li>**问题**：目录层次过深，不便于查找和管理</li>
+<li>**解决方案**：控制目录层次，一般不超过3-4层</li>
+<p></p>
+<h3>问题2：命名不一致</h3>
+<li>**问题**：目录和文件命名不一致，影响可读性</li>
+<li>**解决方案**：制定统一的命名规范，严格执行</li>
+<p></p>
+<h3>问题3：功能划分不清</h3>
+<li>**问题**：功能划分不清，文件存放位置不合理</li>
+<li>**解决方案**：明确功能划分，合理组织文件</li>
+<p></p>
+<h3>问题4：链接失效</h3>
+<li>**问题**：使用绝对路径，导致链接失效</li>
+<li>**解决方案**：使用相对路径，确保链接的稳定性</li></ul>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>练习时间！</h2>
+<p></p>
+<h3>练习1：分析目录结构</h3>
+<p>1. 分析我们的项目目录结构</p>
+<p>2. 理解每个目录的用途</p>
+<p>3. 思考如何改进目录结构</p>
+<p></p>
+<h3>练习2：设计目录结构</h3>
+<p>1. 为自己的项目设计一个目录结构</p>
+<p>2. 考虑目录的层次和命名</p>
+<p>3. 确保目录结构的合理性和可扩展性</p>
+<p></p>
+<h3>练习3：优化目录结构</h3>
+<p>1. 选择一个现有的项目</p>
+<p>2. 分析其目录结构</p>
+<p>3. 提出优化建议</p>
+<p></p>
+<h3>练习4：实践目录结构</h3>
+<p>1. 根据设计的目录结构创建目录</p>
+<p>2. 按照目录结构组织文件</p>
+<p>3. 验证目录结构的合理性</p>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>总结</h2>
+<p></p>
+<p>在本节中，你学会了：</p>
+<p></p>
+<p>✅ 目录结构的重要性</p>
+<p>✅ 目录结构的设计原则</p>
+<p>✅ 我们项目的目录结构</p>
+<p>✅ 目录结构的最佳实践</p>
+<p>✅ 如何设计自己的目录结构</p>
+<p>✅ 常见目录结构问题及解决方案</p>
+<p></p>
+<p>**现在你已经了解了如何设计合理的目录结构，让我们继续学习Git工作流！**</p>
+<p></p>
+<p>---</p>
+<p></p>
+<p>**下一步**：让我们进入<a href="section03-git-workflow.md">5.3 Git工作流</a>，学习如何使用Git进行版本控制和协作！</p>
+<p></p>
+    </div>
+</body>
+</html>

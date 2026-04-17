@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4.3 GitHub仓库创建与配置</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1, h2, h3, h4 {
+            color: #667eea;
+        }
+        a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul, ol {
+            margin-left: 20px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 5px 10px;
+            background: #f0f0f0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../index.html" class="back-link">返回教程目录</a>
+        <h1>4.3 GitHub仓库创建与配置</h1>
+<p></p>
+<h2>目标</h2>
+<p></p>
+<p>在本节中，你将：</p>
+<ul><li>学习如何在GitHub上创建仓库</li>
+<li>掌握GitHub仓库的基本设置</li>
+<li>熟悉GitHub的基本界面</li>
+<li>了解如何配置GitHub Pages</li>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>步骤1：登录GitHub</h2>
+<p></p>
+<h3>操作步骤：</h3>
+<p></p>
+<p>1. **访问GitHub官网**</p>
+<p>   - 打开浏览器，访问 <a href="https://github.com/">https://github.com/</a></p>
+<p></p>
+<p>2. **登录账号**</p>
+<p>   - 点击页面右上角的「Sign in」按钮</p>
+<p>   - 输入你的GitHub账号和密码</p>
+<p>   - 如果有两步验证，按照提示完成</p>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>步骤2：熟悉GitHub界面</h2>
+<p></p>
+<p>登录成功后，让我们熟悉一下GitHub的主要界面：</p>
+<p></p>
+<h3>主要功能区域：</h3>
+<li>🏠 **首页/仪表盘**：查看项目概览和最近活动</li>
+<li>📁 **Repositories**：管理你的代码仓库</li>
+<li>👥 **Organizations**：管理组织和团队</li>
+<li>🔧 **Settings**：个人设置和账号管理</li>
+<p></p>
+<h3>导航菜单：</h3>
+<li>左上角是GitHub logo和主菜单</li>
+<li>右上角是搜索框、通知和用户头像</li>
+<li>左侧是最近的仓库和活动</li>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>步骤3：创建新仓库</h2>
+<p></p>
+<h3>操作步骤：</h3>
+<p></p>
+<p>1. **进入仓库创建页面**</p>
+<p>   - 登录后，点击页面右上角的「+」号</p>
+<p>   - 选择「New repository」</p>
+<p></p>
+<p>2. **填写仓库信息**</p>
+<p>   - **Repository name**：输入 `tutorial-project`</p>
+<p>     - 建议使用小写字母和连字符</p>
+<p>     - 不要使用空格或特殊字符</p>
+<p>   - **Description**：输入「使用Solo Trae Web Code制作的网页教程项目」</p>
+<p>     - 简单描述一下这个项目是做什么的</p>
+<p>   - **Visibility**：选择「Public」（公开）</p>
+<p>     - 公开仓库：任何人都可以查看和克隆</p>
+<p>     - 私有仓库：只有你和授权的人可以查看</p>
+<p>   - **Initialize this repository with**：可选是否初始化</p>
+<p>     - 可以勾选「Add a README file」</p>
+<p>     - 也可以留空，稍后自己上传文件</p>
+<p></p>
+<p>3. **创建仓库**</p>
+<p>   - 确认所有信息填写正确</p>
+<p>   - 点击「Create repository」按钮</p>
+<p>   - 等待仓库创建完成</p>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>步骤4：查看仓库页面</h2>
+<p></p>
+<p>仓库创建成功后，你会看到仓库的主页，这里包含：</p>
+<p></p>
+<h3>仓库主页内容：</h3>
+<li>📄 **代码文件**：显示仓库中的文件和目录</li>
+<li>📋 **README**：项目说明文档（如果初始化时创建了）</li>
+<li>⭐ **Star**：收藏仓库</li>
+<li>👁️ **Watch**：关注仓库动态</li>
+<li>🔀 **Fork**：复制仓库到自己的账号</li>
+<li>📁 **Clone**：获取仓库的Git地址</li>
+<p></p>
+<h3>仓库操作菜单：</h3>
+<li>**Code**：查看和管理代码</li>
+<li>**Issues**：跟踪问题和任务</li>
+<li>**Pull requests**：代码审查和合并</li>
+<li>**Actions**：CI/CD流水线</li>
+<li>**Projects**：项目管理</li>
+<li>**Settings**：仓库设置</li>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>步骤5：配置GitHub Pages</h2>
+<p></p>
+<p>现在让我们配置GitHub Pages来托管我们的网站：</p>
+<p></p>
+<p>1. **进入Settings页面**</p>
+<p>   - 在仓库页面，点击顶部的「Settings」标签</p>
+<p></p>
+<p>2. **找到GitHub Pages设置**</p>
+<p>   - 在左侧菜单中，找到并点击「Pages」</p>
+<p></p>
+<p>3. **配置部署源**</p>
+<p>   - 在「Build and deployment」部分，选择「Source」为「Deploy from a branch」</p>
+<p>   - 选择「Branch」为「main」</p>
+<p>   - 选择「Folder」为「/project」（因为我们的网站文件在project目录中）</p>
+<p></p>
+<p>4. **保存配置**</p>
+<p>   - 点击「Save」按钮</p>
+<p>   - 等待GitHub Pages部署完成</p>
+<p></p>
+<p>5. **获取访问地址**</p>
+<p>   - 部署完成后，页面会显示GitHub Pages的访问地址</p>
+<p>   - 格式通常为：`https://slowdown87.github.io/tutorial-project/`</p>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>仓库创建最佳实践</h2>
+<p></p>
+<h3>1. 命名规范</h3>
+<li>使用有意义的名称</li>
+<li>避免使用特殊字符</li>
+<li>建议使用小写字母和连字符</li>
+<li>保持名称简洁明了</li>
+<p></p>
+<h3>2. 描述信息</h3>
+<li>清晰描述项目用途</li>
+<li>包含关键信息</li>
+<li>方便他人理解项目</li>
+<p></p>
+<h3>3. 初始化选项</h3>
+<li>通常建议初始化README</li>
+<li>可以添加.gitignore文件</li>
+<li>根据项目需求选择合适的初始化选项</li>
+<p></p>
+<h3>4. GitHub Pages配置</h3>
+<li>选择正确的分支和目录</li>
+<li>确保有index.html文件</li>
+<li>等待部署完成后测试访问</li></ul>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>常见问题与解答</h2>
+<p></p>
+<h3>Q: 公开仓库和私有仓库有什么区别？</h3>
+<p>**A:** 公开仓库任何人都可以查看和克隆，适合开源项目；私有仓库只有授权用户才能访问，适合私人项目。GitHub Pages对于公开仓库是完全免费的，私有仓库需要GitHub Pro。</p>
+<p></p>
+<h3>Q: 可以修改仓库名称吗？</h3>
+<p>**A:** 可以，在仓库设置中可以修改仓库名称，但修改后GitHub Pages的URL也会改变，需要更新相关链接。</p>
+<p></p>
+<h3>Q: 一个账号可以创建多少个仓库？</h3>
+<p>**A:** GitHub对于仓库数量没有限制，你可以创建任意数量的公开或私有仓库。</p>
+<p></p>
+<h3>Q: 可以删除仓库吗？</h3>
+<p>**A:** 可以，在仓库设置的最底部找到「Delete this repository」选项，但删除操作不可恢复，请谨慎操作。</p>
+<p></p>
+<h3>Q: GitHub Pages部署需要多长时间？</h3>
+<p>**A:** 通常需要1-10分钟，部署完成后会在GitHub Pages设置页面显示访问地址。</p>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>练习时间！</h2>
+<p></p>
+<h3>练习1：登录GitHub</h3>
+<p>1. 访问GitHub官网</p>
+<p>2. 使用你的账号登录</p>
+<p>3. 完成两步验证（如果启用）</p>
+<p></p>
+<h3>练习2：熟悉界面</h3>
+<p>1. 登录后浏览一下各个页面</p>
+<p>2. 了解主要功能区域</p>
+<p>3. 查看个人设置页面</p>
+<p></p>
+<h3>练习3：创建测试仓库</h3>
+<p>1. 创建一个名为 `test-project` 的测试仓库</p>
+<p>2. 填写仓库描述</p>
+<p>3. 选择公开类型</p>
+<p>4. 初始化README文件</p>
+<p>5. 查看创建好的仓库页面</p>
+<p></p>
+<h3>练习4：配置GitHub Pages</h3>
+<p>1. 进入测试仓库的Settings页面</p>
+<p>2. 找到GitHub Pages设置</p>
+<p>3. 配置部署源为main分支的根目录</p>
+<p>4. 保存配置并等待部署完成</p>
+<p>5. 访问GitHub Pages地址测试</p>
+<p></p>
+<h3>练习5：删除测试仓库</h3>
+<p>1. 进入测试仓库的设置页面</p>
+<p>2. 找到删除仓库的选项</p>
+<p>3. 按照提示删除测试仓库</p>
+<p>4. 确认仓库已被删除</p>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>总结</h2>
+<p></p>
+<p>在本节中，你学会了：</p>
+<p></p>
+<p>✅ 如何登录GitHub</p>
+<p>✅ 如何熟悉GitHub的界面</p>
+<p>✅ 如何创建新的代码仓库</p>
+<p>✅ 如何配置GitHub Pages</p>
+<p>✅ 仓库创建的最佳实践</p>
+<p>✅ 常见问题的解决方法</p>
+<p></p>
+<p>**现在你已经成功创建了GitHub仓库并配置了GitHub Pages，让我们继续推送代码吧！**</p>
+<p></p>
+<p>---</p>
+<p></p>
+<p>**下一步**：让我们进入<a href="section04-access-token-git.md">4.4 推送代码到GitHub</a>，学习如何将本地代码推送到GitHub仓库！</p>
+<p></p>
+    </div>
+</body>
+</html>

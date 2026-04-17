@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.1 项目初始化步骤</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1, h2, h3, h4 {
+            color: #667eea;
+        }
+        a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul, ol {
+            margin-left: 20px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 5px 10px;
+            background: #f0f0f0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../index.html" class="back-link">返回教程目录</a>
+        <h1>3.1 项目初始化步骤</h1>
+<p></p>
+<h2>目标</h2>
+<p></p>
+<p>在本节中，你将：</p>
+<ul><li>学习如何在线完成项目初始化（推荐，适合零基础用户）</li>
+<li>了解如何在本地完成项目初始化（可选）</li>
+<li>了解项目的基本结构</li>
+<li>掌握Git版本控制的基本操作</li>
+<li>为后续的网页制作做好准备</li>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>为什么需要项目初始化？</h2>
+<p></p>
+<p>项目初始化是任何开发项目的第一步，它为我们的工作奠定基础：</p>
+<p></p>
+<h3>项目初始化的重要性：</h3>
+<li>📁 建立清晰的目录结构</li>
+<li>🔄 启用版本控制，便于追踪变更</li>
+<li>📋 为后续的开发工作做好准备</li>
+<li>🎯 确保项目的可维护性</li>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>在线完成项目初始化（推荐，适合零基础用户）</h2>
+<p></p>
+<p>对于零基础用户，我们推荐使用在线方式完成项目初始化，这样不需要安装任何软件，直接在浏览器中操作即可。</p>
+<p></p>
+<h3>操作步骤：</h3>
+<p></p>
+<p>1. **打开Solo Trae Web Code**</p>
+<p>   - 访问 <a href="https://solo.trae.cn/">https://solo.trae.cn/</a></p>
+<p>   - 登录你的账号</p>
+<p></p>
+<p>2. **创建新项目**</p>
+<p>   - 在Solo Trae Web Code界面中，点击「新建项目」按钮</p>
+<p>   - 输入项目名称，例如 `tutorial-project`</p>
+<p>   - 选择「空白项目」模板</p>
+<p>   - 点击「创建」按钮</p>
+<p></p>
+<p>3. **创建项目结构**</p>
+<p>   - 在左侧文件管理器中，点击「新建文件夹」按钮</p>
+<p>   - 创建以下文件夹：</p>
+<p>     - `project/` - 存放实际的网页项目代码</p>
+<p>     - `docs/` - 存放教程文档</p>
+<p>     - `docs/images/` - 存放教程截图</p>
+<p></p>
+<p>4. **创建基本文件**</p>
+<p>   - 在 `project` 文件夹中，创建 `index.html` 文件：</p>
+<p>     ```html</p>
+<p>     <!DOCTYPE html></p>
+<p>     <html lang="zh-CN"></p>
+<p>     <head></p>
+<p>         <meta charset="UTF-8"></p>
+<p>         <meta name="viewport" content="width=device-width, initial-scale=1.0"></p>
+<p>         <title>我的第一个网页</title></p>
+<p>         <link rel="stylesheet" href="css/style.css"></p>
+<p>     </head></p>
+<p>     <body></p>
+<p>         <h1>欢迎来到我的网页！</h1></p>
+<p>         <p>这是一个使用Solo Trae Web Code制作的网页。</p></p>
+<p>         <script src="js/script.js"></script></p>
+<p>     </body></p>
+<p>     </html></p>
+<p>     ```</p>
+<p></p>
+<p>   - 在 `project` 文件夹中创建 `css` 子文件夹，然后创建 `style.css` 文件：</p>
+<p>     ```css</p>
+<p>     body {</p>
+<p>         font-family: Arial, sans-serif;</p>
+<p>         margin: 0;</p>
+<p>         padding: 20px;</p>
+<p>         background-color: #f0f0f0;</p>
+<p>     }</p>
+<p>     </p>
+<p>     h1 {</p>
+<p>         color: #333;</p>
+<p>     }</p>
+<p>     </p>
+<p>     p {</p>
+<p>         color: #666;</p>
+<p>     }</p>
+<p>     ```</p>
+<p></p>
+<p>   - 在 `project` 文件夹中创建 `js` 子文件夹，然后创建 `script.js` 文件：</p>
+<p>     ```javascript</p>
+<p>     console.log("Hello, Solo Trae!");</p>
+<p>     </p>
+<p>     // 简单的交互功能</p>
+<p>     document.addEventListener("DOMContentLoaded", function() {</p>
+<p>         console.log("网页加载完成！");</p>
+<p>     });</p>
+<p>     ```</p>
+<p></p>
+<p>5. **创建README.md文件**</p>
+<p>   - 在根目录创建 `README.md` 文件：</p>
+<p>     ```markdown</p>
+<p>     # 教程项目</p>
+<p>     </p>
+<p>     这是一个关于如何使用Solo Trae Web Code制作网页并发布的教程项目。</p>
+<p>     ```</p>
+<p></p>
+<p>6. **创建.gitignore文件**</p>
+<p>   - 在根目录创建 `.gitignore` 文件：</p>
+<p>     ```</p>
+<p>     # 忽略文件</p>
+<p>     node_modules/</p>
+<p>     .DS_Store</p>
+<p>     *.log</p>
+<p>     ```</p>
+<p></p>
+<p>7. **初始化Git仓库**</p>
+<p>   - 在Solo Trae Web Code的终端中执行：</p>
+<p>     ```bash</p>
+<p>     git init</p>
+<p>     git add .</p>
+<p>     git commit -m "初始化项目：创建基本目录结构和文件"</p>
+<p>     ```</p>
+<p></p>
+<p>8. **验证项目结构**</p>
+<p>   你的项目结构应该如下所示：</p>
+<p>   ```</p>
+<p>   tutorial-project/</p>
+<p>   ├── project/</p>
+<p>   │   ├── index.html</p>
+<p>   │   ├── css/</p>
+<p>   │   │   └── style.css</p>
+<p>   │   └── js/</p>
+<p>   │       └── script.js</p>
+<p>   ├── docs/</p>
+<p>   │   └── images/</p>
+<p>   ├── README.md</p>
+<p>   └── .gitignore</p>
+<p>   ```</p>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>本地完成项目初始化（可选）</h2>
+<p></p>
+<p>如果你希望在本地完成项目初始化，可以按照以下步骤操作。</p>
+<p></p>
+<h3>步骤1：创建项目目录结构</h3>
+<p></p>
+<p>让我们开始创建项目的基本目录结构。</p>
+<p></p>
+<h3>操作步骤：</h3>
+<p></p>
+<p>1. **创建主项目目录**</p>
+<p>   - 在你的电脑上选择一个合适的位置</p>
+<p>   - 创建一个名为 `tutorial-project` 的目录</p>
+<p></p>
+<p>2. **创建子目录**</p>
+<p>   在 `tutorial-project` 目录内，创建以下子目录：</p>
+<p>   - `project/` - 存放实际的网页项目代码</p>
+<p>   - `docs/` - 存放教程文档</p>
+<p>   - `docs/images/` - 存放教程截图</p>
+<p></p>
+<p>3. **验证目录结构**</p>
+<p>   你的目录结构应该如下所示：</p>
+<p>   ```</p>
+<p>   tutorial-project/</p>
+<p>   ├── project/</p>
+<p>   ├── docs/</p>
+<p>   │   └── images/</p>
+<p>   └── README.md</p>
+<p>   ```</p>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>步骤2：初始化Git版本控制</h2>
+<p></p>
+<p>Git是一个强大的版本控制工具，它可以帮助我们追踪代码的变更。</p>
+<p></p>
+<h3>操作步骤：</h3>
+<p></p>
+<p>1. **打开终端**</p>
+<p>   - Windows：按 `Win+R`，输入 `cmd`，按回车</p>
+<p>   - Mac：按 `Cmd+Space`，输入 `Terminal`，按回车</p>
+<p>   - Linux：使用快捷键 `Ctrl+Alt+T`</p>
+<p></p>
+<p>2. **进入项目目录**</p>
+<p>   ```bash</p>
+<p>   cd path/to/tutorial-project</p>
+<p>   ```</p>
+<p>   （将 `path/to/` 替换为实际的路径）</p>
+<p></p>
+<p>3. **初始化Git仓库**</p>
+<p>   ```bash</p>
+<p>   git init</p>
+<p>   ```</p>
+<p>   你会看到类似的输出：</p>
+<p>   ```</p>
+<p>   Initialized empty Git repository in /path/to/tutorial-project/.git/</p>
+<p>   ```</p>
+<p></p>
+<p>4. **创建.gitignore文件**</p>
+<p>   这个文件用于告诉Git哪些文件不需要追踪：</p>
+<p>   ```bash</p>
+<p>   echo "# 忽略文件\nnode_modules/\n.DS_Store\n*.log\n" > .gitignore</p>
+<p>   ```</p>
+<p></p>
+<p>5. **创建README.md文件**</p>
+<p>   ```bash</p>
+<p>   echo "# 教程项目\n\n这是一个关于如何使用Solo Trae Web Code制作网页并发布的教程项目。" > README.md</p>
+<p>   ```</p>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>步骤3：创建基本的项目文件</h2>
+<p></p>
+<p>现在让我们创建一些基本的项目文件。</p>
+<p></p>
+<h3>操作步骤：</h3>
+<p></p>
+<p>1. **创建HTML文件**</p>
+<p>   在 `project` 目录中创建 `index.html` 文件：</p>
+<p>   ```bash</p>
+<p>   mkdir -p project</p>
+<p>   echo '<!DOCTYPE html></p>
+<p>   <html lang="zh-CN"></p>
+<p>   <head></p>
+<p>       <meta charset="UTF-8"></p>
+<p>       <meta name="viewport" content="width=device-width, initial-scale=1.0"></p>
+<p>       <title>我的第一个网页</title></p>
+<p>   </head></p>
+<p>   <body></p>
+<p>       <h1>欢迎来到我的网页！</h1></p>
+<p>       <p>这是一个使用Solo Trae Web Code制作的网页。</p></p>
+<p>   </body></p>
+<p>   </html>' > project/index.html</p>
+<p>   ```</p>
+<p></p>
+<p>2. **创建CSS目录和文件**</p>
+<p>   ```bash</p>
+<p>   mkdir -p project/css</p>
+<p>   echo 'body {</p>
+<p>       font-family: Arial, sans-serif;</p>
+<p>       margin: 0;</p>
+<p>       padding: 20px;</p>
+<p>       background-color: #f0f0f0;</p>
+<p>   }</p>
+<p>   </p>
+<p>   h1 {</p>
+<p>       color: #333;</p>
+<p>   }</p>
+<p>   </p>
+<p>   p {</p>
+<p>       color: #666;</p>
+<p>   }' > project/css/style.css</p>
+<p>   ```</p>
+<p></p>
+<p>3. **创建JavaScript目录和文件**</p>
+<p>   ```bash</p>
+<p>   mkdir -p project/js</p>
+<p>   echo 'console.log("Hello, Solo Trae!");</p>
+<p>   </p>
+<p>   // 简单的交互功能</p>
+<p>   document.addEventListener("DOMContentLoaded", function() {</p>
+<p>       console.log("网页加载完成！");</p>
+<p>   });' > project/js/script.js</p>
+<p>   ```</p>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>步骤4：更新HTML文件，引入CSS和JavaScript</h2>
+<p></p>
+<p>让我们更新 `index.html` 文件，引入我们刚刚创建的CSS和JavaScript文件。</p>
+<p></p>
+<h3>操作步骤：</h3>
+<p></p>
+<p>1. **编辑index.html文件**</p>
+<p>   使用文本编辑器打开 `project/index.html` 文件，修改为：</p>
+<p>   ```html</p>
+<p>   <!DOCTYPE html></p>
+<p>   <html lang="zh-CN"></p>
+<p>   <head></p>
+<p>       <meta charset="UTF-8"></p>
+<p>       <meta name="viewport" content="width=device-width, initial-scale=1.0"></p>
+<p>       <title>我的第一个网页</title></p>
+<p>       <link rel="stylesheet" href="css/style.css"></p>
+<p>   </head></p>
+<p>   <body></p>
+<p>       <h1>欢迎来到我的网页！</h1></p>
+<p>       <p>这是一个使用Solo Trae Web Code制作的网页。</p></p>
+<p>       <script src="js/script.js"></script></p>
+<p>   </body></p>
+<p>   </html></p>
+<p>   ```</p>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>步骤5：验证项目结构</h2>
+<p></p>
+<p>让我们检查一下我们创建的项目结构是否正确。</p>
+<p></p>
+<h3>操作步骤：</h3>
+<p></p>
+<p>1. **查看目录结构**</p>
+<p>   在终端中执行：</p>
+<p>   ```bash</p>
+<p>   ls -la tutorial-project/</p>
+<p>   ```</p>
+<p></p>
+<p>2. **查看文件内容**</p>
+<p>   确认所有文件都已创建并包含正确的内容。</p>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>步骤6：提交初始代码到Git</h2>
+<p></p>
+<p>现在让我们将初始代码提交到Git仓库。</p>
+<p></p>
+<h3>操作步骤：</h3>
+<p></p>
+<p>1. **添加文件到暂存区**</p>
+<p>   ```bash</p>
+<p>   git add .</p>
+<p>   ```</p>
+<p></p>
+<p>2. **提交更改**</p>
+<p>   ```bash</p>
+<p>   git commit -m "初始化项目：创建基本目录结构和文件"</p>
+<p>   ```</p>
+<p></p>
+<p>3. **查看提交历史**</p>
+<p>   ```bash</p>
+<p>   git log</p>
+<p>   ```</p>
+<p>   你会看到类似的输出：</p>
+<p>   ```</p>
+<p>   commit 1234567890abcdef1234567890abcdef12345678</p>
+<p>   Author: Your Name <your.email@example.com></p>
+<p>   Date:   Today's date</p>
+<p></p>
+<p>       初始化项目：创建基本目录结构和文件</p>
+<p>   ```</p>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>项目结构说明</h2>
+<p></p>
+<p>现在我们已经创建了一个基本的项目结构，让我们来了解一下每个部分的作用：</p>
+<p></p>
+<p>| 目录/文件 | 作用 |</p>
+<p>|-----------|------|</p>
+<p>| `project/` | 存放实际的网页项目代码 |</p>
+<p>| `project/index.html` | 网页的主文件 |</p>
+<p>| `project/css/` | 存放CSS样式文件 |</p>
+<p>| `project/js/` | 存放JavaScript脚本文件 |</p>
+<p>| `docs/` | 存放教程文档 |</p>
+<p>| `docs/images/` | 存放教程截图 |</p>
+<p>| `.git/` | Git版本控制目录 |</p>
+<p>| `.gitignore` | Git忽略文件配置 |</p>
+<p>| `README.md` | 项目说明文件 |</p>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>常见问题与解答</h2>
+<p></p>
+<h3>Q: 我没有Git怎么办？</h3>
+<p>**A:** 如果你使用在线方式完成项目初始化，Solo Trae Web Code已经内置了Git功能，不需要单独安装。如果你选择本地方式，则需要从 <a href="https://git-scm.com/downloads">Git官网</a> 下载并安装Git。</p>
+<p></p>
+<h3>Q: 我不会使用终端命令怎么办？</h3>
+<p>**A:** 推荐使用在线方式完成项目初始化，Solo Trae Web Code提供了图形化界面，不需要使用终端命令。如果你选择本地方式，可以使用文件管理器手动创建目录和文件，然后使用图形化Git客户端（如GitHub Desktop）来管理版本控制。</p>
+<p></p>
+<h3>Q: 项目结构可以根据需要调整吗？</h3>
+<p>**A:** 当然可以！这只是一个基本的结构，你可以根据项目的具体需求进行调整。</p>
+<p></p>
+<h3>Q: 我需要创建其他文件吗？</h3>
+<p>**A:** 目前的文件已经足够开始基本的网页制作。随着项目的进展，你可以根据需要添加更多文件。</p>
+<p></p>
+<h3>Q: 在线方式和本地方式有什么区别？</h3>
+<p>**A:** </p>
+<li>**在线方式**：不需要安装任何软件，直接在浏览器中操作，适合零基础用户</li>
+<li>**本地方式**：需要在本地安装Git和其他工具，适合有一定技术基础的用户</li></ul>
+<p></p>
+<h3>Q: 我可以在在线方式和本地方式之间切换吗？</h3>
+<p>**A:** 可以！你可以先使用在线方式完成初始化，然后将项目下载到本地进行进一步开发，或者反之。</p>
+<p></p>
+<h3>Q: 在线方式的项目数据安全吗？</h3>
+<p>**A:** Solo Trae Web Code会保存你的项目数据，你也可以定期将项目下载到本地进行备份。</p>
+<p></p>
+<h3>Q: 我需要网络连接才能使用在线方式吗？</h3>
+<p>**A:** 是的，在线方式需要网络连接。如果你需要离线工作，可以选择本地方式。</p>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>练习时间！</h2>
+<p></p>
+<h3>在线方式练习（推荐）</h3>
+<p></p>
+<p>#### 练习1：在线创建项目</p>
+<p>1. 打开 <a href="https://solo.trae.cn/">https://solo.trae.cn/</a></p>
+<p>2. 登录你的账号</p>
+<p>3. 创建一个名为 `tutorial-project` 的新项目</p>
+<p></p>
+<p>#### 练习2：创建项目结构</p>
+<p>1. 在Solo Trae Web Code中创建以下文件夹：</p>
+<p>   - `project/`</p>
+<p>   - `docs/`</p>
+<p>   - `docs/images/`</p>
+<p>2. 验证目录结构是否正确</p>
+<p></p>
+<p>#### 练习3：创建基本文件</p>
+<p>1. 在 `project` 文件夹中创建 `index.html` 文件</p>
+<p>2. 在 `project/css` 文件夹中创建 `style.css` 文件</p>
+<p>3. 在 `project/js` 文件夹中创建 `script.js` 文件</p>
+<p>4. 在根目录创建 `README.md` 和 `.gitignore` 文件</p>
+<p></p>
+<p>#### 练习4：初始化Git仓库</p>
+<p>1. 在Solo Trae Web Code的终端中执行：</p>
+<p>   ```bash</p>
+<p>   git init</p>
+<p>   git add .</p>
+<p>   git commit -m "初始化项目：创建基本目录结构和文件"</p>
+<p>   ```</p>
+<p>2. 查看提交历史</p>
+<p></p>
+<h3>本地方式练习（可选）</h3>
+<p></p>
+<p>#### 练习1：创建项目目录结构</p>
+<p>1. 按照步骤创建 `tutorial-project` 目录及其子目录</p>
+<p>2. 验证目录结构是否正确</p>
+<p></p>
+<p>#### 练习2：初始化Git仓库</p>
+<p>1. 在项目目录中初始化Git仓库</p>
+<p>2. 创建 `.gitignore` 文件</p>
+<p>3. 创建 `README.md` 文件</p>
+<p></p>
+<p>#### 练习3：创建基本文件</p>
+<p>1. 创建 `index.html`、`style.css` 和 `script.js` 文件</p>
+<p>2. 更新 `index.html` 文件，引入CSS和JavaScript</p>
+<p></p>
+<p>#### 练习4：提交代码</p>
+<p>1. 将所有文件添加到Git</p>
+<p>2. 提交初始代码</p>
+<p>3. 查看提交历史</p>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>总结</h2>
+<p></p>
+<p>在本节中，你学会了：</p>
+<p></p>
+<p>✅ 如何在线完成项目初始化（推荐，适合零基础用户）</p>
+<p>✅ 如何在本地完成项目初始化（可选）</p>
+<p>✅ 如何创建项目的基本目录结构</p>
+<p>✅ 如何初始化Git版本控制</p>
+<p>✅ 如何创建基本的HTML、CSS和JavaScript文件</p>
+<p>✅ 如何将初始代码提交到Git仓库</p>
+<p>✅ 了解了项目结构的各个部分及其作用</p>
+<p></p>
+<p>**现在你的项目已经初始化完成，为后续的网页制作做好了准备！**</p>
+<p></p>
+<p>---</p>
+<p></p>
+<p>**下一步**：让我们进入<a href="section02-project-config.md">3.2 项目配置与设置</a>，进一步完善我们的项目！</p>
+    </div>
+</body>
+</html>

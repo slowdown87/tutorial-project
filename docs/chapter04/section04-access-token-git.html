@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4.4 推送代码到GitHub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1, h2, h3, h4 {
+            color: #667eea;
+        }
+        a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul, ol {
+            margin-left: 20px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 5px 10px;
+            background: #f0f0f0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../index.html" class="back-link">返回教程目录</a>
+        <h1>4.4 推送代码到GitHub</h1>
+<p></p>
+<h2>目标</h2>
+<p></p>
+<p>在本节中，你将：</p>
+<ul><li>学习如何在GitHub上创建个人访问令牌</li>
+<li>掌握如何配置Git与GitHub配合使用</li>
+<li>理解如何将本地代码推送到GitHub仓库</li>
+<li>了解访问令牌的重要性和安全注意事项</li>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>什么是个人访问令牌？</h2>
+<p></p>
+<p>**个人访问令牌（Personal Access Token）**是GitHub提供的一种安全认证方式，用于替代密码进行Git操作。</p>
+<p></p>
+<h3>为什么需要个人访问令牌？</h3>
+<li>🔐 **安全性**：比直接使用密码更安全</li>
+<li>🎛️ **权限控制**：可以设置不同的权限级别</li>
+<li>📅 **有效期**：可以设置过期时间</li>
+<li>🗑️ **可撤销**：可以随时撤销，不影响主密码</li>
+<p></p>
+<h3>GitHub的认证方式：</h3>
+<li>**用户名**：你的GitHub用户名</li>
+<li>**密码**：你的个人访问令牌</li>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>步骤1：创建个人访问令牌</h2>
+<p></p>
+<h3>操作步骤：</h3>
+<p></p>
+<p>1. **进入GitHub个人设置**</p>
+<p>   - 登录GitHub后，点击右上角的用户头像</p>
+<p>   - 选择「Settings」</p>
+<p></p>
+<p>2. **找到开发者设置**</p>
+<p>   - 在左侧菜单中，找到并点击「Developer settings」</p>
+<p></p>
+<p>3. **进入个人访问令牌设置**</p>
+<p>   - 点击「Personal access tokens」</p>
+<p>   - 选择「Tokens (classic)」</p>
+<p></p>
+<p>4. **生成新令牌**</p>
+<p>   - 点击「Generate new token」按钮</p>
+<p>   - 选择「Generate new token (classic)」</p>
+<p>   - 输入令牌名称（例如：`tutorial-project-token`）</p>
+<p>     - 建议使用有意义的名称，方便识别</p>
+<p>   - 设置过期时间（推荐：30天或90天）</p>
+<p>   - 选择令牌权限</p>
+<p>     - 勾选「repo」权限（用于代码仓库操作）</p>
+<p>   - 点击「Generate token」按钮</p>
+<p></p>
+<p>5. **复制令牌**</p>
+<p>   - ⚠️ **重要**：令牌只会显示一次！</p>
+<p>   - 立即复制生成的令牌</p>
+<p>   - 保存到安全的地方（例如密码管理器）</p>
+<p>   - 不要分享给他人</p>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>步骤2：配置Git远程仓库</h2>
+<p></p>
+<h3>操作步骤：</h3>
+<p></p>
+<p>1. **打开终端**</p>
+<p>   - 在Solo Trae Web Code中打开终端</p>
+<p>   - 或者在本地电脑打开命令行工具</p>
+<p></p>
+<p>2. **进入项目目录**</p>
+<p>   ```bash</p>
+<p>   cd /workspace/tutorial-project</p>
+<p>   ```</p>
+<p></p>
+<p>3. **检查当前远程仓库**</p>
+<p>   ```bash</p>
+<p>   git remote -v</p>
+<p>   ```</p>
+<p></p>
+<p>4. **更新GitHub远程仓库URL**</p>
+<p>   ```bash</p>
+<p>   git remote set-url github https://<你的GitHub用户名>:<你的访问令牌>@github.com/slowdown87/tutorial-project.git</p>
+<p>   ```</p>
+<p>   </p>
+<p>   注意：</p>
+<p>   - 将 `<你的GitHub用户名>` 替换为你的GitHub用户名</p>
+<p>   - 将 `<你的访问令牌>` 替换为你刚才创建的令牌</p>
+<p></p>
+<p>5. **验证远程仓库配置**</p>
+<p>   ```bash</p>
+<p>   git remote -v</p>
+<p>   ```</p>
+<p>   </p>
+<p>   你应该看到类似这样的输出：</p>
+<p>   ```</p>
+<p>   github  https://<你的GitHub用户名>:<你的访问令牌>@github.com/slowdown87/tutorial-project.git (fetch)</p>
+<p>   github  https://<你的GitHub用户名>:<你的访问令牌>@github.com/slowdown87/tutorial-project.git (push)</p>
+<p>   ```</p>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>步骤3：推送代码到GitHub</h2>
+<p></p>
+<h3>操作步骤：</h3>
+<p></p>
+<p>1. **检查本地代码状态**</p>
+<p>   ```bash</p>
+<p>   git status</p>
+<p>   ```</p>
+<p></p>
+<p>2. **添加所有更改**</p>
+<p>   ```bash</p>
+<p>   git add .</p>
+<p>   ```</p>
+<p></p>
+<p>3. **提交更改**</p>
+<p>   ```bash</p>
+<p>   git commit -m "Update project files for GitHub Pages"</p>
+<p>   ```</p>
+<p></p>
+<p>4. **推送到GitHub**</p>
+<p>   ```bash</p>
+<p>   git push github main</p>
+<p>   ```</p>
+<p></p>
+<p>5. **验证推送成功**</p>
+<p>   - 访问GitHub仓库页面</p>
+<p>   - 确认代码已成功推送</p>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>步骤4：检查GitHub Pages部署</h2>
+<p></p>
+<p>1. **进入GitHub仓库的Settings页面**</p>
+<p>   - 点击顶部的「Settings」标签</p>
+<p>   - 找到「Pages」设置</p>
+<p></p>
+<p>2. **查看部署状态**</p>
+<p>   - 确认部署状态为「Deployed」</p>
+<p>   - 获取GitHub Pages的访问地址</p>
+<p></p>
+<p>3. **测试访问**</p>
+<p>   - 打开浏览器，访问GitHub Pages地址</p>
+<p>   - 确认网站可以正常访问</p>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>个人访问令牌安全最佳实践</h2>
+<p></p>
+<h3>1. 令牌管理</h3>
+<li>🔑 **不要分享**：不要将令牌分享给他人</li>
+<li>💾 **安全存储**：使用密码管理器存储令牌</li>
+<li>📅 **定期轮换**：定期创建新令牌，撤销旧令牌</li>
+<li>🎯 **最小权限**：只授予必要的权限</li>
+<p></p>
+<h3>2. 权限设置</h3>
+<li>**repo权限**：用于代码仓库操作</li>
+<li>**只读权限**：如果只需要拉取代码，选择相应权限</li>
+<li>**特定仓库**：尽量限制令牌的访问范围</li>
+<p></p>
+<h3>3. 应急处理</h3>
+<li>**令牌泄露**：如果令牌泄露，立即撤销</li>
+<li>**可疑活动**：发现异常活动时，立即检查并更换令牌</li>
+<li>**审计日志**：定期查看令牌使用日志</li></ul>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>常见问题与解答</h2>
+<p></p>
+<h3>Q: 个人访问令牌忘记保存怎么办？</h3>
+<p>**A:** 个人访问令牌只显示一次，如果忘记保存，需要撤销旧令牌并创建新令牌。</p>
+<p></p>
+<h3>Q: 可以创建多个个人访问令牌吗？</h3>
+<p>**A:** 可以，建议为不同的项目或用途创建不同的令牌，便于管理和撤销。</p>
+<p></p>
+<h3>Q: 个人访问令牌有过期时间吗？</h3>
+<p>**A:** 可以在创建时设置过期时间，建议设置30天或90天的过期时间以提高安全性。</p>
+<p></p>
+<h3>Q: GitHub支持SSH吗？</h3>
+<p>**A:** 是的，GitHub也支持SSH协议，你可以配置SSH密钥来替代HTTPS认证。</p>
+<p></p>
+<h3>Q: 个人访问令牌泄露了怎么办？</h3>
+<p>**A:** 如果个人访问令牌泄露了，请立即在GitHub设置页面撤销该令牌，并创建一个新的令牌。</p>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>练习时间！</h2>
+<p></p>
+<h3>练习1：创建个人访问令牌</h3>
+<p>1. 进入GitHub的个人设置页面</p>
+<p>2. 找到开发者设置</p>
+<p>3. 创建一个新的个人访问令牌</p>
+<p>4. 复制并保存好令牌</p>
+<p>5. 确认令牌创建成功</p>
+<p></p>
+<h3>练习2：配置Git远程仓库</h3>
+<p>1. 打开终端，进入项目目录</p>
+<p>2. 更新GitHub远程仓库URL，包含访问令牌</p>
+<p>3. 查看远程仓库配置</p>
+<p>4. 确认配置正确</p>
+<p></p>
+<h3>练习3：推送代码到GitHub</h3>
+<p>1. 检查本地代码状态</p>
+<p>2. 添加所有更改</p>
+<p>3. 提交更改</p>
+<p>4. 推送到GitHub</p>
+<p>5. 验证推送成功</p>
+<p></p>
+<h3>练习4：检查GitHub Pages部署</h3>
+<p>1. 进入GitHub仓库的Settings页面</p>
+<p>2. 查看GitHub Pages部署状态</p>
+<p>3. 访问GitHub Pages地址测试</p>
+<p>4. 确认网站可以正常访问</p>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>总结</h2>
+<p></p>
+<p>在本节中，你学会了：</p>
+<p></p>
+<p>✅ 什么是个人访问令牌</p>
+<p>✅ 如何在GitHub上创建个人访问令牌</p>
+<p>✅ 如何配置Git与GitHub配合使用</p>
+<p>✅ 如何将代码推送到GitHub</p>
+<p>✅ 如何检查GitHub Pages部署</p>
+<p>✅ 个人访问令牌的安全最佳实践</p>
+<p>✅ 常见问题的解决方法</p>
+<p></p>
+<p>**现在你已经成功将代码推送到GitHub并配置了GitHub Pages，网站应该可以正常访问了！**</p>
+<p></p>
+<p>---</p>
+<p></p>
+<p>**下一步**：让我们进入<a href="section05-push-deploy.md">4.5 项目部署与维护</a>，学习如何维护和更新部署的网站！</p>
+<p></p>
+    </div>
+</body>
+</html>

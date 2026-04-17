@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub发布流程</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1, h2, h3, h4 {
+            color: #667eea;
+        }
+        a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul, ol {
+            margin-left: 20px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 5px 10px;
+            background: #f0f0f0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../index.html" class="back-link">返回教程目录</a>
+        <h1>GitHub发布流程</h1>
+<p></p>
+<h2>1. 创建GitHub仓库</h2>
+<p></p>
+<h3>步骤1: 登录GitHub</h3>
+<ul><li>打开浏览器，访问 <a href="https://github.com">GitHub</a></li>
+<li>登录你的GitHub账号</li>
+<p></p>
+<h3>步骤2: 创建新仓库</h3>
+<p>1. 点击右上角的"+"按钮，选择"New repository"</p>
+<p>2. 填写仓库信息：</p>
+<p>   - **Repository name**: 输入仓库名称，例如"github-pages-tutorial"</p>
+<p>   - **Description**: 输入仓库描述，例如"教程：如何使用GitHub发布网页"</p>
+<p>   - **Visibility**: 选择"Public"或"Private"</p>
+<p>   - **Initialize this repository with**: 勾选"Add a README file"</p>
+<p>3. 点击"Create repository"按钮</p>
+<p></p>
+<h3>步骤3: 克隆仓库到本地</h3>
+<p>1. 复制仓库的HTTPS或SSH链接</p>
+<p>2. 在本地终端中执行：</p>
+<p>   ```bash</p>
+<p>   git clone <仓库链接> tutorial-project</p>
+<p>   cd tutorial-project</p>
+<p>   ```</p>
+<p></p>
+<h2>2. 配置GitHub Pages</h2>
+<p></p>
+<h3>步骤1: 选择发布源</h3>
+<p>1. 进入仓库页面，点击"Settings"标签</p>
+<p>2. 滚动到"Pages"部分</p>
+<p>3. 在"Source"下拉菜单中选择：</p>
+<p>   - **Branch**: 选择"main"</p>
+<p>   - **Folder**: 选择"/docs"（如果教程文档在docs目录）或"/"（如果在根目录）</p>
+<p>4. 点击"Save"按钮</p>
+<p></p>
+<h3>步骤2: 配置自定义域名（可选）</h3>
+<p>1. 在"Custom domain"输入框中输入你的域名</p>
+<p>2. 点击"Save"按钮</p>
+<p>3. 在你的域名提供商处添加CNAME记录，指向`<username>.github.io`</p>
+<p></p>
+<h3>步骤3: 启用HTTPS</h3>
+<li>勾选"Enforce HTTPS"选项，确保网站使用HTTPS协议</li>
+<p></p>
+<h2>3. 部署项目</h2>
+<p></p>
+<h3>步骤1: 准备项目文件</h3>
+<li>确保项目文件已添加到仓库中</li>
+<li>确保教程文档已更新到最新状态</li>
+<li>检查所有链接和资源是否正确</li>
+<p></p>
+<h3>步骤2: 提交和推送更改</h3>
+<p>1. 查看更改：</p>
+<p>   ```bash</p>
+<p>   git status</p>
+<p>   ```</p>
+<p>2. 暂存更改：</p>
+<p>   ```bash</p>
+<p>   git add .</p>
+<p>   ```</p>
+<p>3. 提交更改：</p>
+<p>   ```bash</p>
+<p>   git commit -m "[docs]: 更新教程内容"</p>
+<p>   ```</p>
+<p>4. 推送更改：</p>
+<p>   ```bash</p>
+<p>   git push origin main</p>
+<p>   ```</p>
+<p></p>
+<h3>步骤3: 等待部署完成</h3>
+<li>GitHub Pages会自动构建和部署网站</li>
+<li>部署过程通常需要1-5分钟</li>
+<li>可以在仓库的"Actions"标签中查看部署状态</li>
+<p></p>
+<h2>4. 访问和验证</h2>
+<p></p>
+<h3>步骤1: 获取网站URL</h3>
+<li>部署完成后，在"Settings" → "Pages"部分会显示网站URL</li>
+<li>格式通常为：`<username>.github.io/<repository-name>`</li>
+<p></p>
+<h3>步骤2: 访问网站</h3>
+<li>打开浏览器，输入网站URL</li>
+<li>检查网站是否正常加载</li>
+<li>验证所有页面和链接是否正常工作</li>
+<p></p>
+<h3>步骤3: 验证教程内容</h3>
+<li>按照教程步骤重新执行，确保可复现性</li>
+<li>检查截图是否清晰可见</li>
+<li>验证代码示例是否正确</li>
+<p></p>
+<h2>5. 持续更新和维护</h2>
+<p></p>
+<h3>步骤1: 定期更新内容</h3>
+<li>当项目有变更时，同步更新教程</li>
+<li>定期检查链接和资源是否有效</li>
+<li>根据用户反馈改进教程内容</li>
+<p></p>
+<h3>步骤2: 监控网站状态</h3>
+<li>使用GitHub Pages的状态检查</li>
+<li>定期访问网站，确保正常运行</li>
+<li>监控网站加载速度和性能</li>
+<p></p>
+<h3>步骤3: 备份和版本控制</h3>
+<li>使用Git进行版本控制</li>
+<li>定期创建分支，测试新内容</li>
+<li>保持提交历史清晰，便于回滚</li>
+<p></p>
+<h2>6. 故障排除</h2>
+<p></p>
+<h3>常见问题及解决方案</h3>
+<p></p>
+<p>1. **网站无法访问**</p>
+<p>   - 检查仓库设置是否正确</p>
+<p>   - 等待几分钟，GitHub Pages可能还在部署</p>
+<p>   - 检查DNS设置（如果使用自定义域名）</p>
+<p></p>
+<p>2. **页面加载错误**</p>
+<p>   - 检查文件路径是否正确</p>
+<p>   - 确保所有资源文件都已提交</p>
+<p>   - 检查HTML/CSS/JS语法错误</p>
+<p></p>
+<p>3. **图片不显示**</p>
+<p>   - 检查图片路径是否正确</p>
+<p>   - 确保图片文件已提交到仓库</p>
+<p>   - 检查图片格式是否支持</p>
+<p></p>
+<p>4. **链接失效**</p>
+<p>   - 检查链接地址是否正确</p>
+<p>   - 确保目标文件存在</p>
+<p>   - 使用相对路径而非绝对路径</p>
+<p></p>
+<p>5. **部署失败**</p>
+<p>   - 检查GitHub Actions日志</p>
+<p>   - 确保仓库中没有构建错误</p>
+<p>   - 检查文件大小是否超过限制（GitHub Pages有文件大小限制）</p>
+<p></p>
+<h2>7. 最佳实践</h2>
+<p></p>
+<h3>发布前检查清单</h3>
+<li>[ ] 所有文件都已提交到仓库</li>
+<li>[ ] 教程内容与项目代码一致</li>
+<li>[ ] 所有链接都已验证</li>
+<li>[ ] 图片和资源都已正确引用</li>
+<li>[ ] 网站在不同浏览器中测试通过</li>
+<li>[ ] 网站在移动设备上测试通过</li>
+<p></p>
+<h3>维护建议</h3>
+<li>**定期更新**: 至少每季度检查一次教程内容</li>
+<li>**版本管理**: 使用Git标签标记重要版本</li>
+<li>**反馈收集**: 鼓励用户提供反馈和建议</li>
+<li>**性能优化**: 优化图片大小和加载速度</li>
+<li>**SEO优化**: 添加适当的元标签和描述</li>
+<p></p>
+<h2>8. 高级配置</h2>
+<p></p>
+<h3>使用静态网站生成器</h3>
+<li>**Jekyll**: GitHub Pages默认支持的静态网站生成器</li>
+<li>**Hugo**: 快速的静态网站生成器</li>
+<li>**Gatsby**: 基于React的静态网站生成器</li>
+<p></p>
+<h3>自动化工作流</h3>
+<li>**GitHub Actions**: 自动构建和部署</li>
+<li>**CI/CD**: 集成持续集成和持续部署</li>
+<li>**Pre-commit hooks**: 提交前检查代码和文档</li>
+<p></p>
+<h3>自定义主题和样式</h3>
+<li>使用GitHub Pages支持的主题</li>
+<li>自定义CSS样式</li>
+<li>添加交互功能和动画效果</li></ul>
+    </div>
+</body>
+</html>

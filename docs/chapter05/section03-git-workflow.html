@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5.3 Git工作流</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1, h2, h3, h4 {
+            color: #667eea;
+        }
+        a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul, ol {
+            margin-left: 20px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 5px 10px;
+            background: #f0f0f0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../index.html" class="back-link">返回教程目录</a>
+        <h1>5.3 Git工作流</h1>
+<p></p>
+<h2>目标</h2>
+<p></p>
+<p>在本节中，你将：</p>
+<ul><li>学习Git的基本工作流程</li>
+<li>掌握Git的常用命令</li>
+<li>了解如何使用Git进行版本控制</li>
+<li>学会如何使用Git进行协作开发</li>
+<li>掌握Git的最佳实践</li>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>什么是Git工作流？</h2>
+<p></p>
+<p>**Git工作流**是指使用Git进行版本控制的一套标准化流程和实践方法。它包括：</p>
+<p></p>
+<li>🔄 **版本管理**：跟踪文件的变化</li>
+<li>🌿 **分支管理**：管理不同的开发分支</li>
+<li>📝 **提交规范**：规范提交信息</li>
+<li>🔗 **远程协作**：与远程仓库同步</li>
+<li>🧹 **代码审查**：确保代码质量</li>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>Git的基本工作流程</h2>
+<p></p>
+<h3>1. 初始化仓库</h3>
+<li>**本地初始化**：`git init`</li>
+<li>**克隆远程仓库**：`git clone <URL>`</li>
+<li>**添加远程仓库**：`git remote add origin <URL>`</li>
+<p></p>
+<h3>2. 日常开发</h3>
+<li>**查看状态**：`git status`</li>
+<li>**添加文件**：`git add <文件>` 或 `git add .`</li>
+<li>**提交更改**：`git commit -m "提交信息"`</li>
+<li>**查看历史**：`git log`</li>
+<p></p>
+<h3>3. 分支管理</h3>
+<li>**查看分支**：`git branch`</li>
+<li>**创建分支**：`git branch <分支名>`</li>
+<li>**切换分支**：`git checkout <分支名>` 或 `git switch <分支名>`</li>
+<li>**合并分支**：`git merge <分支名>`</li>
+<li>**删除分支**：`git branch -d <分支名>`</li>
+<p></p>
+<h3>4. 远程协作</h3>
+<li>**推送代码**：`git push origin <分支名>`</li>
+<li>**拉取代码**：`git pull origin <分支名>`</li>
+<li>**获取更新**：`git fetch origin`</li>
+<li>**查看远程**：`git remote -v`</li>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>我们的Git工作流实践</h2>
+<p></p>
+<p>在本项目中，我们采用了以下Git工作流：</p>
+<p></p>
+<h3>1. 初始化阶段</h3>
+<li>初始化本地Git仓库</li>
+<li>添加cnb.cool作为远程仓库</li>
+<li>配置Git用户名和邮箱</li>
+<p></p>
+<h3>2. 开发阶段</h3>
+<li>每次完成一个小任务后进行提交</li>
+<li>提交信息清晰明了，描述具体做了什么</li>
+<li>定期推送到远程仓库</li>
+<p></p>
+<h3>3. 分支策略</h3>
+<li>使用main分支作为主分支</li>
+<li>所有开发直接在main分支上进行（小型项目）</li>
+<li>重要版本使用标签标记</li>
+<p></p>
+<h3>4. 同步策略</h3>
+<li>每次操作后及时提交</li>
+<li>定期推送到cnb.cool</li>
+<li>确保远程仓库与本地仓库同步</li>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>Git命令详解</h2>
+<p></p>
+<h3>1. 基本命令</h3>
+<p></p>
+<p>| 命令 | 功能 | 示例 |</p>
+<p>|------|------|------|</p>
+<p>| `git init` | 初始化Git仓库 | `git init` |</p>
+<p>| `git clone` | 克隆远程仓库 | `git clone https://cnb.cool/slowdown87/tutorial-project.git` |</p>
+<p>| `git status` | 查看工作区状态 | `git status` |</p>
+<p>| `git add` | 添加文件到暂存区 | `git add .` |</p>
+<p>| `git commit` | 提交更改 | `git commit -m "更新第5章内容"` |</p>
+<p>| `git log` | 查看提交历史 | `git log --oneline` |</p>
+<p>| `git remote` | 管理远程仓库 | `git remote add cnb https://cnb.cool/slowdown87/tutorial-project.git` |</p>
+<p>| `git push` | 推送代码到远程 | `git push cnb main` |</p>
+<p>| `git pull` | 从远程拉取代码 | `git pull cnb main` |</p>
+<p>| `git branch` | 管理分支 | `git branch` |</p>
+<p>| `git checkout` | 切换分支 | `git checkout main` |</p>
+<p></p>
+<h3>2. 高级命令</h3>
+<p></p>
+<p>| 命令 | 功能 | 示例 |</p>
+<p>|------|------|------|</p>
+<p>| `git diff` | 查看文件差异 | `git diff` |</p>
+<p>| `git stash` | 暂存更改 | `git stash` |</p>
+<p>| `git reset` | 重置提交 | `git reset HEAD~1` |</p>
+<p>| `git tag` | 管理标签 | `git tag v1.0.0` |</p>
+<p>| `git revert` | 撤销提交 | `git revert <commit>` |</p>
+<p>| `git cherry-pick` |  cherry-pick 提交 | `git cherry-pick <commit>` |</p>
+<p>| `git rebase` | 变基 | `git rebase main` |</p>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>Git提交规范</h2>
+<p></p>
+<h3>1. 提交信息格式</h3>
+<p></p>
+<p>```</p>
+<p><类型>(<范围>): <描述></p>
+<p></p>
+<p><详细描述></p>
+<p></p>
+<p><footer></p>
+<p>```</p>
+<p></p>
+<h3>2. 提交类型</h3>
+<p></p>
+<li>**feat**：新功能</li>
+<li>**fix**：修复bug</li>
+<li>**docs**：文档更新</li>
+<li>**style**：代码风格调整</li>
+<li>**refactor**：代码重构</li>
+<li>**test**：测试相关</li>
+<li>**chore**：构建或依赖更新</li>
+<p></p>
+<h3>3. 提交信息示例</h3>
+<p></p>
+<p>```</p>
+<p>feat(chapter05): 添加Git工作流章节</p>
+<p></p>
+<li>编写了Git工作流的基本概念</li>
+<li>详细介绍了Git常用命令</li>
+<li>提供了Git提交规范</li>
+<li>包含了实际操作示例</li>
+<p></p>
+<p>Closes #1</p>
+<p>```</p>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>Git最佳实践</h2>
+<p></p>
+<h3>1. 日常使用</h3>
+<p></p>
+<li>**小步提交**：每次只提交一个逻辑单元的更改</li>
+<li>**清晰信息**：提交信息要清晰明了</li>
+<li>**定期推送**：定期推送到远程仓库</li>
+<li>**分支管理**：合理使用分支</li>
+<li>**标签管理**：使用标签标记重要版本</li>
+<p></p>
+<h3>2. 协作开发</h3>
+<p></p>
+<li>**代码审查**：使用Pull Request进行代码审查</li>
+<li>**冲突解决**：及时解决合并冲突</li>
+<li>**同步更新**：定期拉取远程更新</li>
+<li>**分支策略**：制定合理的分支策略</li>
+<li>**规范遵守**：遵守团队的Git规范</li>
+<p></p>
+<h3>3. 安全注意事项</h3>
+<p></p>
+<li>**不要提交敏感信息**：如密码、API密钥等</li>
+<li>**使用.gitignore**：忽略不需要版本控制的文件</li>
+<li>**定期备份**：定期备份远程仓库</li>
+<li>**权限管理**：合理设置仓库权限</li>
+<li>**审计日志**：定期查看Git日志</li>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>常见Git问题及解决方案</h2>
+<p></p>
+<h3>问题1：合并冲突</h3>
+<li>**问题**：合并分支时出现冲突</li>
+<li>**解决方案**：手动解决冲突，然后提交</li>
+<p></p>
+<h3>问题2：误提交</h3>
+<li>**问题**：提交了错误的文件或信息</li>
+<li>**解决方案**：使用 `git reset` 或 `git revert` 撤销提交</li>
+<p></p>
+<h3>问题3：远程推送失败</h3>
+<li>**问题**：推送代码到远程仓库失败</li>
+<li>**解决方案**：检查网络连接，确认权限，先拉取再推送</li>
+<p></p>
+<h3>问题4：忘记添加文件</h3>
+<li>**问题**：提交后发现忘记添加某些文件</li>
+<li>**解决方案**：添加文件后再次提交，使用 `git commit --amend` 修正上次提交</li>
+<p></p>
+<h3>问题5：分支管理混乱</h3>
+<li>**问题**：分支过多或管理混乱</li>
+<li>**解决方案**：定期清理不需要的分支，保持分支结构清晰</li></ul>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>练习时间！</h2>
+<p></p>
+<h3>练习1：Git基本操作</h3>
+<p>1. 初始化一个Git仓库</p>
+<p>2. 添加一些文件</p>
+<p>3. 提交更改</p>
+<p>4. 查看提交历史</p>
+<p></p>
+<h3>练习2：分支管理</h3>
+<p>1. 创建一个新分支</p>
+<p>2. 在新分支上进行更改</p>
+<p>3. 切换回主分支</p>
+<p>4. 合并新分支</p>
+<p></p>
+<h3>练习3：远程协作</h3>
+<p>1. 添加远程仓库</p>
+<p>2. 推送代码到远程</p>
+<p>3. 拉取远程更新</p>
+<p>4. 解决合并冲突</p>
+<p></p>
+<h3>练习4：提交规范</h3>
+<p>1. 按照规范编写提交信息</p>
+<p>2. 练习不同类型的提交</p>
+<p>3. 查看提交历史</p>
+<p>4. 修正错误提交</p>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>总结</h2>
+<p></p>
+<p>在本节中，你学会了：</p>
+<p></p>
+<p>✅ Git的基本工作流程</p>
+<p>✅ Git的常用命令</p>
+<p>✅ 如何使用Git进行版本控制</p>
+<p>✅ 如何使用Git进行协作开发</p>
+<p>✅ Git的提交规范</p>
+<p>✅ Git的最佳实践</p>
+<p>✅ 常见Git问题及解决方案</p>
+<p></p>
+<p>**现在你已经掌握了Git的基本使用方法，让我们继续学习如何制作教程内容！**</p>
+<p></p>
+<p>---</p>
+<p></p>
+<p>**下一步**：让我们进入<a href="../chapter06/section01-tutorial-structure.md">第6章：制作教程内容</a>，学习如何制作高质量的教程内容！</p>
+<p></p>
+    </div>
+</body>
+</html>

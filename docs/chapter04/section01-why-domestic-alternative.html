@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4.1 国内环境下的平台选择探索</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1, h2, h3, h4 {
+            color: #667eea;
+        }
+        a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul, ol {
+            margin-left: 20px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 5px 10px;
+            background: #f0f0f0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../index.html" class="back-link">返回教程目录</a>
+        <h1>4.1 国内环境下的平台选择探索</h1>
+<p></p>
+<h2>目标</h2>
+<p></p>
+<p>在本节中，你将：</p>
+<ul><li>了解国内网络环境下的平台选择挑战</li>
+<li>学习我们的探索历程和最终选择</li>
+<li>理解为什么GitHub Pages仍然是最佳选择</li>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>国内环境的挑战</h2>
+<p></p>
+<p>在我们的项目中，我们经历了一段曲折的平台选择历程，这反映了国内开发者在选择代码托管和网站部署平台时面临的现实挑战。</p>
+<p></p>
+<h3>GitHub在国内的挑战：</h3>
+<li>⚠️ **访问不稳定**：由于网络原因，GitHub在国内的访问速度较慢，有时甚至无法访问</li>
+<li>⚠️ **加载时间长**：网页加载时间长，影响用户体验</li>
+<li>⚠️ **功能受限**：某些功能可能无法正常使用</li>
+<p></p>
+<h3>国内平台的挑战：</h3>
+<li>🚫 **服务不稳定**：部分国内平台服务突然下线（如Gitee Pages）</li>
+<li>🔒 **功能限制**：免费版功能有限，高级功能需要付费</li>
+<li>🌐 **生态不完善**：社区规模小，资源和教程相对较少</li>
+<li>🔄 **接口变动**：平台接口和功能经常变动，影响稳定性</li>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>我们的探索历程</h2>
+<p></p>
+<p>我们的平台选择经历了以下几个阶段：</p>
+<p></p>
+<h3>1. 初始计划：GitHub + GitHub Pages</h3>
+<li>**优势**：全球标准，生态完善，功能稳定</li>
+<li>**劣势**：国内访问速度慢</li>
+<p></p>
+<h3>2. 第一次尝试：Gitee + Cloudflare Pages</h3>
+<li>**优势**：Gitee国内访问快，Cloudflare Pages全球CDN</li>
+<li>**劣势**：需要两个平台配合，操作复杂</li>
+<p></p>
+<h3>3. 第二次尝试：Cloud Native Build (cnb.cool)</h3>
+<li>**优势**：一站式服务，国内访问快</li>
+<li>**劣势**：部署配置复杂，需要额外学习成本</li>
+<p></p>
+<h3>4. 第三次尝试：EdgeOne Pages</h3>
+<li>**优势**：腾讯云提供，国内访问快</li>
+<li>**劣势**：预览链接只有3小时有效期，需要绑定域名</li>
+<p></p>
+<h3>5. 最终决定：回到GitHub Pages</h3>
+<li>**优势**：稳定可靠，永久免费，全球认可，生态完善</li>
+<li>**劣势**：国内访问速度较慢，但基本可用</li>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>国内替代方案评估</h2>
+<p></p>
+<p>让我们系统地评估几个主要的平台：</p>
+<p></p>
+<h3>1. 代码托管平台</h3>
+<p></p>
+<p>| 平台 | 优势 | 劣势 |</p>
+<p>|------|------|------|</p>
+<p>| **GitHub** | 全球标准，生态完善，功能稳定 | 国内访问速度慢 |</p>
+<p>| **Gitee** | 完全国内托管，访问速度快 | Gitee Pages已下线，服务不稳定 |</p>
+<p>| **Coding.net** | 提供代码托管和项目管理服务 | 免费版功能有限 |</p>
+<p>| **Cloud Native Build** | 一站式服务 | 部署配置复杂 |</p>
+<p></p>
+<h3>2. 静态网站托管平台</h3>
+<p></p>
+<p>| 平台 | 优势 | 劣势 |</p>
+<p>|------|------|------|</p>
+<p>| **GitHub Pages** | 稳定可靠，永久免费，与GitHub集成 | 国内访问速度慢 |</p>
+<p>| **Cloudflare Pages** | 全球CDN加速 | 国内访问不稳定 |</p>
+<p>| **EdgeOne Pages** | 国内访问快 | 预览链接有效期短 |</p>
+<p>| **Vercel** | 部署速度快 | 国内访问不稳定 |</p>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>为什么最终选择GitHub Pages？</h2>
+<p></p>
+<p>经过多轮尝试，我们最终决定回到GitHub Pages，原因如下：</p>
+<p></p>
+<h3>1. 稳定性第一</h3>
+<li>✅ **永久免费**：没有时间限制，完全免费</li>
+<li>✅ **服务稳定**：GitHub作为全球最大的代码托管平台，服务稳定可靠</li>
+<li>✅ **不会突然下线**：避免了国内平台服务突然停止的风险</li>
+<p></p>
+<h3>2. 生态完善</h3>
+<li>✅ **丰富的资源**：大量的教程、插件和工具</li>
+<li>✅ **社区活跃**：遇到问题容易找到解决方案</li>
+<li>✅ **标准兼容**：符合行业标准，便于迁移和扩展</li>
+<p></p>
+<h3>3. 功能完整</h3>
+<li>✅ **自动部署**：推送代码后自动构建和部署</li>
+<li>✅ **HTTPS支持**：自动提供SSL证书</li>
+<li>✅ **自定义域名**：支持绑定自己的域名</li>
+<li>✅ **版本控制**：与GitHub代码仓库无缝集成</li></ul>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>国内访问优化建议</h2>
+<p></p>
+<p>虽然GitHub在国内访问速度较慢，但我们可以通过以下方法优化：</p>
+<p></p>
+<p>1. **使用CDN加速**：为自定义域名配置国内CDN</p>
+<p>2. **合理安排时间**：在网络状况好的时候进行操作</p>
+<p>3. **使用代理工具**：必要时使用可靠的网络工具</p>
+<p>4. **缓存策略**：合理设置浏览器缓存</p>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>练习时间！</h2>
+<p></p>
+<h3>练习1：体验国内网络环境</h3>
+<p>1. 访问GitHub，记录加载时间</p>
+<p>2. 尝试访问其他国内代码托管平台</p>
+<p>3. 对比不同平台的访问速度和稳定性</p>
+<p></p>
+<h3>练习2：评估平台选择</h3>
+<p>1. 列出你认为重要的平台特性</p>
+<p>2. 为每个平台打分</p>
+<p>3. 做出你自己的平台选择</p>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>总结</h2>
+<p></p>
+<p>在本节中，你学会了：</p>
+<p></p>
+<p>✅ 国内网络环境下的平台选择挑战</p>
+<p>✅ 我们的平台探索历程</p>
+<p>✅ 为什么GitHub Pages是最终选择</p>
+<p>✅ 如何优化国内访问GitHub的体验</p>
+<p></p>
+<p>**现在你已经理解了我们的平台选择过程，让我们继续了解GitHub Pages的使用方法！**</p>
+<p></p>
+<p>---</p>
+<p></p>
+<p>**下一步**：让我们进入<a href="section02-cnb-intro.md">4.2 GitHub Pages 介绍</a>，了解我们最终选择的平台！</p>
+<p></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.2 项目配置与设置</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1, h2, h3, h4 {
+            color: #667eea;
+        }
+        a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul, ol {
+            margin-left: 20px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 5px 10px;
+            background: #f0f0f0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../index.html" class="back-link">返回教程目录</a>
+        <h1>3.2 项目配置与设置</h1>
+<p></p>
+<h2>目标</h2>
+<p></p>
+<p>在本节中，你将：</p>
+<ul><li>学习如何配置项目的基本设置</li>
+<li>了解如何优化项目结构</li>
+<li>掌握Git的基本配置</li>
+<li>为后续的开发工作做好准备</li>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>为什么需要项目配置？</h2>
+<p></p>
+<p>项目配置是确保项目正常运行和便于维护的重要步骤：</p>
+<p></p>
+<h3>项目配置的重要性：</h3>
+<li>⚙️ 确保项目的一致性和可维护性</li>
+<li>🔧 优化开发环境和工作流程</li>
+<li>📋 便于团队协作和代码管理</li>
+<li>🎯 为后续的部署和发布做好准备</li>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>在线方式：项目配置（推荐）</h2>
+<p></p>
+<p>对于使用Solo Trae Web Code的用户，我们推荐使用在线方式进行项目配置。</p>
+<p></p>
+<h3>操作步骤：</h3>
+<p></p>
+<p>1. **配置Git用户信息**</p>
+<p>   - 在Solo Trae Web Code的终端中执行：</p>
+<p>     ```bash</p>
+<p>     git config --global user.name "Your Name"</p>
+<p>     git config --global user.email "your.email@example.com"</p>
+<p>     ```</p>
+<p>   - 将 `Your Name` 替换为你的名字</p>
+<p>   - 将 `your.email@example.com` 替换为你的邮箱</p>
+<p></p>
+<p>2. **设置Git默认分支**</p>
+<p>   ```bash</p>
+<p>   git config --global init.defaultBranch main</p>
+<p>   ```</p>
+<p></p>
+<p>3. **创建项目配置文件**</p>
+<p>   - 在根目录创建 `package.json` 文件（用于管理项目依赖）：</p>
+<p>     ```json</p>
+<p>     {</p>
+<p>       "name": "tutorial-project",</p>
+<p>       "version": "1.0.0",</p>
+<p>       "description": "使用Solo Trae Web Code制作的网页教程项目",</p>
+<p>       "main": "index.html",</p>
+<p>       "scripts": {</p>
+<p>         "start": "echo \"Project started\"",</p>
+<p>         "build": "echo \"Project built\""</p>
+<p>       },</p>
+<p>       "keywords": [</p>
+<p>         "tutorial",</p>
+<p>         "web",</p>
+<p>         "solo trae"</p>
+<p>       ],</p>
+<p>       "author": "Your Name",</p>
+<p>       "license": "MIT"</p>
+<p>     }</p>
+<p>     ```</p>
+<p></p>
+<p>4. **创建README.md文件（如果尚未创建）**</p>
+<p>   ```markdown</p>
+<p>   # 教程项目</p>
+<p></p>
+<p>   这是一个关于如何使用Solo Trae Web Code制作网页并发布的教程项目。</p>
+<p></p>
+<p>   ## 项目结构</p>
+<p></p>
+<p>   ```</p>
+<p>   tutorial-project/</p>
+<p>   ├── project/                # 实际的网页项目代码</p>
+<p>   │   ├── index.html          # 网页主文件</p>
+<p>   │   ├── css/                # CSS样式文件</p>
+<p>   │   └── js/                 # JavaScript脚本文件</p>
+<p>   ├── docs/                   # 教程文档</p>
+<p>   └── README.md               # 项目说明</p>
+<p>   ```</p>
+<p></p>
+<p>   ## 如何使用</p>
+<p></p>
+<p>   1. 打开 `project/index.html` 文件查看网页</p>
+<p>   2. 查看 `docs/` 目录中的教程文档</p>
+<p></p>
+<p>   ## 技术栈</p>
+<p></p>
+<p>   - HTML5</p>
+<p>   - CSS3</p>
+<p>   - JavaScript</p>
+<p>   ```</p>
+<p>   ```</p>
+<p></p>
+<p>5. **创建 .gitignore 文件（如果尚未创建）**</p>
+<p>   ```</p>
+<p>   # 忽略文件</p>
+<p>   node_modules/</p>
+<p>   .DS_Store</p>
+<p>   *.log</p>
+<p>   .env</p>
+<p>   ```</p>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>本地方式：项目配置（可选）</h2>
+<p></p>
+<p>如果你在本地进行开发，可以按照以下步骤进行配置。</p>
+<p></p>
+<h3>操作步骤：</h3>
+<p></p>
+<p>1. **配置Git用户信息**</p>
+<p>   - 在终端中执行：</p>
+<p>     ```bash</p>
+<p>     git config --global user.name "Your Name"</p>
+<p>     git config --global user.email "your.email@example.com"</p>
+<p>     ```</p>
+<p></p>
+<p>2. **设置Git默认分支**</p>
+<p>   ```bash</p>
+<p>   git config --global init.defaultBranch main</p>
+<p>   ```</p>
+<p></p>
+<p>3. **安装必要的工具（可选）**</p>
+<p>   - 如果你需要使用现代前端工具，可以安装：</p>
+<p>     ```bash</p>
+<p>     # 安装npm（如果尚未安装）</p>
+<p>     # 从 https://nodejs.org/ 下载并安装Node.js</p>
+<p>     </p>
+<p>     # 初始化npm项目</p>
+<p>     npm init -y</p>
+<p>     </p>
+<p>     # 安装开发依赖</p>
+<p>     npm install --save-dev live-server</p>
+<p>     ```</p>
+<p></p>
+<p>4. **配置开发脚本**</p>
+<p>   - 修改 `package.json` 文件：</p>
+<p>     ```json</p>
+<p>     {</p>
+<p>       "scripts": {</p>
+<p>         "start": "live-server project",</p>
+<p>         "build": "echo \"Project built\""</p>
+<p>       }</p>
+<p>     }</p>
+<p>     ```</p>
+<p></p>
+<p>5. **启动开发服务器**</p>
+<p>   ```bash</p>
+<p>   npm start</p>
+<p>   ```</p>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>项目结构优化</h2>
+<p></p>
+<p>为了使项目更加组织化和易于维护，我们可以对项目结构进行优化。</p>
+<p></p>
+<h3>建议的目录结构：</h3>
+<p></p>
+<p>```</p>
+<p>tutorial-project/</p>
+<p>├── project/                    # 实际的网页项目代码</p>
+<p>│   ├── index.html              # 网页主文件</p>
+<p>│   ├── css/                    # CSS样式文件</p>
+<p>│   │   ├── style.css           # 主样式文件</p>
+<p>│   │   └── components/         # 组件样式</p>
+<p>│   ├── js/                     # JavaScript脚本文件</p>
+<p>│   │   ├── script.js           # 主脚本文件</p>
+<p>│   │   └── components/         # 组件脚本</p>
+<p>│   ├── assets/                 # 静态资源</p>
+<p>│   │   ├── images/             # 图片文件</p>
+<p>│   │   └── fonts/              # 字体文件</p>
+<p>│   └── favicon.ico             # 网站图标</p>
+<p>├── docs/                       # 教程文档</p>
+<p>│   ├── index.md                # 教程首页</p>
+<p>│   ├── chapter01/              # 第1章内容</p>
+<p>│   ├── chapter02/              # 第2章内容</p>
+<p>│   ├── chapter03/              # 第3章内容</p>
+<p>│   └── images/                 # 教程截图</p>
+<p>├── .git/                       # Git版本控制目录</p>
+<p>├── .gitignore                  # Git忽略文件配置</p>
+<p>├── package.json                # 项目配置文件</p>
+<p>└── README.md                   # 项目说明文件</p>
+<p>```</p>
+<p></p>
+<h3>结构优化的好处：</h3>
+<li>📁 更清晰的文件组织</li>
+<li>🎯 更好的代码管理</li>
+<li>🔄 更方便的维护和扩展</li>
+<li>📋 更易于团队协作</li>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>在线方式：优化项目结构</h2>
+<p></p>
+<h3>操作步骤：</h3>
+<p></p>
+<p>1. **创建assets目录**</p>
+<p>   - 在 `project` 目录中创建 `assets` 文件夹</p>
+<p>   - 在 `assets` 文件夹中创建 `images` 和 `fonts` 子文件夹</p>
+<p></p>
+<p>2. **创建components目录**</p>
+<p>   - 在 `css` 和 `js` 目录中分别创建 `components` 子文件夹</p>
+<p></p>
+<p>3. **创建favicon.ico文件**</p>
+<p>   - 在 `project` 目录中创建一个简单的网站图标文件</p>
+<p></p>
+<p>4. **更新项目文件**</p>
+<p>   - 更新 `index.html` 文件，引入favicon：</p>
+<p>     ```html</p>
+<p>     <link rel="icon" href="favicon.ico" type="image/x-icon"></p>
+<p>     ```</p>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>本地方式：优化项目结构（可选）</h2>
+<p></p>
+<h3>操作步骤：</h3>
+<p></p>
+<p>1. **创建必要的目录**</p>
+<p>   ```bash</p>
+<p>   mkdir -p project/assets/{images,fonts} project/css/components project/js/components</p>
+<p>   ```</p>
+<p></p>
+<p>2. **创建favicon.ico文件**</p>
+<p>   - 可以使用在线工具生成favicon，然后保存到 `project` 目录</p>
+<p></p>
+<p>3. **更新index.html文件**</p>
+<p>   ```html</p>
+<p>   <link rel="icon" href="favicon.ico" type="image/x-icon"></p>
+<p>   ```</p>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>Git配置与管理</h2>
+<p></p>
+<h3>基本Git操作</h3>
+<p></p>
+<p>1. **查看Git状态**</p>
+<p>   ```bash</p>
+<p>   git status</p>
+<p>   ```</p>
+<p></p>
+<p>2. **添加文件到暂存区**</p>
+<p>   ```bash</p>
+<p>   git add .</p>
+<p>   ```</p>
+<p></p>
+<p>3. **提交更改**</p>
+<p>   ```bash</p>
+<p>   git commit -m "配置项目：优化项目结构和配置"</p>
+<p>   ```</p>
+<p></p>
+<p>4. **查看提交历史**</p>
+<p>   ```bash</p>
+<p>   git log</p>
+<p>   ```</p>
+<p></p>
+<h3>Git分支管理</h3>
+<p></p>
+<p>1. **创建新分支**</p>
+<p>   ```bash</p>
+<p>   git branch feature-branch</p>
+<p>   ```</p>
+<p></p>
+<p>2. **切换分支**</p>
+<p>   ```bash</p>
+<p>   git checkout feature-branch</p>
+<p>   ```</p>
+<p></p>
+<p>3. **合并分支**</p>
+<p>   ```bash</p>
+<p>   git checkout main</p>
+<p>   git merge feature-branch</p>
+<p>   ```</p>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>项目配置最佳实践</h2>
+<p></p>
+<h3>1. 保持配置文件的简洁性</h3>
+<li>只包含必要的配置项</li>
+<li>避免冗余和重复的配置</li>
+<p></p>
+<h3>2. 使用环境变量</h3>
+<li>对于敏感信息，使用环境变量</li>
+<li>创建 `.env` 文件并在 `.gitignore` 中忽略</li>
+<p></p>
+<h3>3. 文档化配置</h3>
+<li>在 README.md 中说明项目的配置和使用方法</li>
+<li>为复杂的配置项添加注释</li>
+<p></p>
+<h3>4. 版本控制配置文件</h3>
+<li>将配置文件纳入版本控制</li>
+<li>但忽略包含敏感信息的文件</li>
+<p></p>
+<h3>5. 自动化配置</h3>
+<li>使用脚本自动化配置过程</li>
+<li>提供配置模板和示例</li></ul>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>常见问题与解答</h2>
+<p></p>
+<h3>Q: 为什么需要配置Git用户信息？</h3>
+<p>**A:** Git需要知道谁进行了代码提交，这样可以追踪代码的变更历史。</p>
+<p></p>
+<h3>Q: package.json文件有什么作用？</h3>
+<p>**A:** package.json文件用于管理项目的依赖和脚本，是现代前端项目的标准配置文件。</p>
+<p></p>
+<h3>Q: 如何选择项目结构？</h3>
+<p>**A:** 项目结构应该根据项目的规模和复杂度来选择。对于小型项目，简单的结构就足够了；对于大型项目，可能需要更复杂的结构。</p>
+<p></p>
+<h3>Q: 什么是favicon.ico文件？</h3>
+<p>**A:** favicon.ico是网站的图标，显示在浏览器标签页和书签中，有助于提升网站的专业感。</p>
+<p></p>
+<h3>Q: 如何处理敏感信息？</h3>
+<p>**A:** 对于敏感信息，应该使用环境变量或配置文件，并确保这些文件被添加到 `.gitignore` 中，不会被提交到版本控制系统。</p>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>练习时间！</h2>
+<p></p>
+<h3>在线方式练习（推荐）</h3>
+<p></p>
+<p>#### 练习1：配置Git用户信息</p>
+<p>1. 在Solo Trae Web Code的终端中配置Git用户信息</p>
+<p>2. 设置Git默认分支</p>
+<p></p>
+<p>#### 练习2：创建项目配置文件</p>
+<p>1. 创建 `package.json` 文件</p>
+<p>2. 更新 `README.md` 文件，添加项目结构说明</p>
+<p>3. 创建或更新 `.gitignore` 文件</p>
+<p></p>
+<p>#### 练习3：优化项目结构</p>
+<p>1. 创建 `assets` 目录和子目录</p>
+<p>2. 创建 `components` 目录</p>
+<p>3. 更新 `index.html` 文件，引入favicon</p>
+<p></p>
+<p>#### 练习4：提交配置更改</p>
+<p>1. 将所有文件添加到Git</p>
+<p>2. 提交配置更改</p>
+<p>3. 查看提交历史</p>
+<p></p>
+<h3>本地方式练习（可选）</h3>
+<p></p>
+<p>#### 练习1：配置Git和安装工具</p>
+<p>1. 配置Git用户信息</p>
+<p>2. 安装必要的开发工具</p>
+<p></p>
+<p>#### 练习2：配置项目</p>
+<p>1. 创建 `package.json` 文件</p>
+<p>2. 配置开发脚本</p>
+<p>3. 启动开发服务器</p>
+<p></p>
+<p>#### 练习3：优化项目结构</p>
+<p>1. 创建必要的目录</p>
+<p>2. 更新项目文件</p>
+<p></p>
+<p>#### 练习4：提交配置更改</p>
+<p>1. 将所有文件添加到Git</p>
+<p>2. 提交配置更改</p>
+<p>3. 查看提交历史</p>
+<p></p>
+<p>---</p>
+<p></p>
+<h2>总结</h2>
+<p></p>
+<p>在本节中，你学会了：</p>
+<p></p>
+<p>✅ 如何配置Git用户信息和默认分支</p>
+<p>✅ 如何创建和配置项目文件（package.json, README.md, .gitignore）</p>
+<p>✅ 如何优化项目结构，使其更加组织化</p>
+<p>✅ 如何使用Git进行基本的版本控制操作</p>
+<p>✅ 项目配置的最佳实践和常见问题的解决方法</p>
+<p></p>
+<p>**现在你的项目已经配置完成，为后续的开发和部署做好了准备！**</p>
+<p></p>
+<p>---</p>
+<p></p>
+<p>**下一步**：让我们进入<a href="../chapter04/section01-why-domestic-alternative.md">第4章：国内替代方案选择</a>，学习如何选择和使用国内的替代方案！</p>
+    </div>
+</body>
+</html>
