@@ -20,9 +20,11 @@
 - [3.3 创建基础配置文件](chapter03/section03.md)
 
 ### 第4章：国内替代方案选择与配置
-- [4.1 为什么不直接用GitHub？](chapter04/section01.md)
-- [4.2 Gitee账号注册与仓库创建](chapter04/section02.md)
-- [4.3 Cloudflare Pages配置](chapter04/section03.md)
+- [4.1 为什么需要国内替代方案？](chapter04/section01.md)
+- [4.2 Cloud Native Build（cnb.cool）介绍](chapter04/section02.md)
+- [4.3 cnb.cool账号注册与仓库创建](chapter04/section03.md)
+- [4.4 访问令牌创建与Git配置](chapter04/section04.md)
+- [4.5 代码推送与部署](chapter04/section05.md)
 
 ### 第5章：同步教程生成机制
 - [5.1 什么是同步教程生成？](chapter05/section01.md)
