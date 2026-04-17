@@ -1,4 +1,4 @@
-# 使用Solo Trae Web Code制作GitHub Pages教程
+# 使用Solo Trae Web Code制作网页教程
 
 欢迎来到本教程！本教程将带领您从零开始，学习如何使用Solo Trae Web Code制作一个完整的教程项目，并最终发布到网上供他人学习。
 
@@ -26,37 +26,33 @@
 - [4.5 代码推送与部署](chapter04/section05-push-deploy.md)
 
 ### 第5章：同步教程生成机制
-- [5.1 什么是同步教程生成？](chapter05/section01.md)
-- [5.2 目录结构设计](chapter05/section02.md)
-- [5.3 Git工作流](chapter05/section03.md)
+- [5.1 什么是同步教程生成？](chapter05/section01-what-is-sync-tutorial.md)
+- [5.2 目录结构设计](chapter05/section02-directory-structure.md)
+- [5.3 Git工作流](chapter05/section03-git-workflow.md)
 
 ### 第6章：制作教程内容
-- [6.1 教程结构设计](chapter06/section01.md)
-- [6.2 如何记录操作步骤？](chapter06/section02.md)
-- [6.3 截图技巧与规范](chapter06/section03.md)
-- [6.4 代码示例编写](chapter06/section04.md)
+- [6.1 教程结构设计](chapter06/section01-tutorial-structure.md)
+- [6.2 如何记录操作步骤？](chapter06/section02-record-steps.md)
+- [6.3 截图技巧与规范](chapter06/section03-screenshot-techniques.md)
 
 ### 第7章：项目开发
-- [7.1 创建示例项目](chapter07/section01.md)
-- [7.2 编写HTML页面](chapter07/section02.md)
-- [7.3 添加CSS样式](chapter07/section03.md)
-- [7.4 JavaScript交互](chapter07/section04.md)
+- [7.1 项目需求分析](chapter07/section01-project-analysis.md)
+- [7.2 项目设计与规划](chapter07/section02-project-design.md)
+- [7.3 项目实现](chapter07/section03-project-implementation.md)
 
-### 第8章：发布到网上
-- [8.1 Gitee代码推送](chapter08/section01.md)
-- [8.2 Cloudflare Pages部署](chapter08/section02.md)
-- [8.3 网站访问与验证](chapter08/section03.md)
-- [8.4 自定义域名配置](chapter08/section04.md)
+### 第8章：项目部署
+- [8.1 部署准备](chapter08/section01-deployment-preparation.md)
+- [8.2 项目部署](chapter08/section02-project-deployment.md)
+- [8.3 项目维护与更新](chapter08/section03-project-maintenance.md)
 
-### 第9章：维护与优化
-- [9.1 持续更新教程](chapter09/section01.md)
-- [9.2 收集用户反馈](chapter09/section02.md)
-- [9.3 SEO优化](chapter09/section03.md)
+### 第9章：项目总结
+- [9.1 项目总结](chapter09/section01-project-summary.md)
 
 ### 附录
-- [常见问题解答](appendix/faq.md)
-- [工具推荐](appendix/tools.md)
-- [参考资源](appendix/resources.md)
+- [AI交流模板](appendix/ai-communication-template.md)
+- [AI主动引导框架](appendix/ai-active-guidance.md)
+- [AI主动引导实现](appendix/ai-active-guidance-implementation.md)
+- [AI模板比较](appendix/ai-templates-comparison.md)
 
 ---
 
@@ -66,8 +62,7 @@
 - ✅ Solo Trae Web Code的基本使用
 - ✅ 如何在制作项目的同时同步生成教程
 - ✅ Git版本控制的使用
-- ✅ 国内Git托管平台（Gitee）的使用
-- ✅ 静态网站托管服务（Cloudflare Pages）的使用
+- ✅ 国内代码托管和部署平台（Cloud Native Build）的使用
 - ✅ 完整的项目开发流程
 - ✅ 网站发布和维护
 
@@ -87,8 +82,7 @@
 - 一台能上网的电脑
 - Solo Trae Web Code（就是您现在正在使用的！）
 - 浏览器（Chrome、Firefox等）
-- 免费的Gitee账号
-- 免费的Cloudflare账号
+- 免费的Cloud Native Build (cnb.cool)账号
 
 ---
 
