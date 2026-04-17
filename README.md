@@ -33,9 +33,9 @@ tutorial-project/
 
 ## 部署信息
 
-本项目使用 Gitee + Cloudflare Pages 进行部署：
-- **代码托管**：Gitee
-- **静态网站托管**：Cloudflare Pages
+本项目使用 Cloud Native Build (cnb.cool) 进行部署：
+- **代码托管**：Cloud Native Build
+- **静态网站托管**：Cloud Native Build Pages
 
 ## 如何运行
 
