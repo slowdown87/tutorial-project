@@ -18,12 +18,12 @@
 - [3.1 项目初始化步骤](chapter03/section01-project-init.md)
 - [3.2 项目配置与设置](chapter03/section02-project-config.md)
 
-### 第4章：国内替代方案选择与配置
-- [4.1 为什么需要国内替代方案？](chapter04/section01-why-domestic-alternative.md)
-- [4.2 Cloud Native Build（cnb.cool）介绍](chapter04/section02-cnb-intro.md)
-- [4.3 cnb.cool账号注册与仓库创建](chapter04/section03-cnb-register-repo.md)
-- [4.4 访问令牌创建与Git配置](chapter04/section04-access-token-git.md)
-- [4.5 代码推送与部署](chapter04/section05-push-deploy.md)
+### 第4章：平台选择与GitHub Pages配置
+- [4.1 国内环境下的平台选择探索](chapter04/section01-why-domestic-alternative.md)
+- [4.2 GitHub Pages 介绍](chapter04/section02-cnb-intro.md)
+- [4.3 GitHub仓库创建与配置](chapter04/section03-cnb-register-repo.md)
+- [4.4 推送代码到GitHub](chapter04/section04-access-token-git.md)
+- [4.5 项目部署与维护](chapter04/section05-push-deploy.md)
 
 ### 第5章：同步教程生成机制
 - [5.1 什么是同步教程生成？](chapter05/section01-what-is-sync-tutorial.md)
@@ -62,7 +62,8 @@
 - ✅ Solo Trae Web Code的基本使用
 - ✅ 如何在制作项目的同时同步生成教程
 - ✅ Git版本控制的使用
-- ✅ 国内代码托管和部署平台（Cloud Native Build）的使用
+- ✅ GitHub和GitHub Pages的使用
+- ✅ 国内环境下的平台选择策略
 - ✅ 完整的项目开发流程
 - ✅ 网站发布和维护
 
@@ -82,7 +83,7 @@
 - 一台能上网的电脑
 - Solo Trae Web Code（就是您现在正在使用的！）
 - 浏览器（Chrome、Firefox等）
-- 免费的Cloud Native Build (cnb.cool)账号
+- 免费的GitHub账号
 
 ---
 
