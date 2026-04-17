@@ -1,8 +1,10 @@
 main:
-  push:
-    - imports: https://cnb.cool/slowdown87/Secret/-/blob/main/envs.yml
-      name: Build and Deploy to EdgeOne Pages
-      stages:
-        - name: Deploy to EdgeOne Pages
-          image: node:20
-          script: npx edgeone pages deploy project/ -n tutorial-project -t $EDGEONE_API_TOKEN
+  build:
+    - stages:
+        - name: build
+          script: echo "Building static site"
+  deploy:
+    - name: deploy
+      script: echo "Deploying to GitHub Pages"
+      artifact: project/
+      website: true
