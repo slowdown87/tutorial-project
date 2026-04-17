@@ -49,99 +49,37 @@
 
 ---
 
-## 我们的选择：Gitee + Cloudflare Pages
+## 我们的选择：Cloud Native Build（cnb.cool）
 
-经过评估，我们选择了**Gitee + Cloudflare Pages**的组合方案，原因如下：
+经过评估，我们选择了**Cloud Native Build（cnb.cool）**作为一站式解决方案，原因如下：
 
-### 为什么选择这个组合？
-- **Gitee**：作为代码托管平台，提供稳定的国内存储
-- **Cloudflare Pages**：作为部署平台，提供全球CDN加速
-- **优势互补**：两者结合，既解决了代码托管的稳定性问题，又解决了网站访问速度问题
+### 为什么选择Cloud Native Build？
+- **一站式服务**：同时提供代码托管和静态网站托管功能
+- **国内服务**：完全国内托管，访问速度快，不受国际网络影响
+- **功能完整**：提供类似GitHub的代码托管功能，包括代码管理、Issues、Pull requests等
+- **易于使用**：操作流程简单直观，界面友好
+- **成本低**：基本功能完全免费
 
 ### 具体优势
 1. **稳定性**：国内访问稳定可靠
-2. **速度快**：Cloudflare的CDN加速确保快速加载
-3. **易于使用**：操作流程与GitHub Pages类似
+2. **速度快**：国内服务器确保快速加载
+3. **易于使用**：操作流程简单直观
 4. **成本低**：基本功能完全免费
 5. **功能完整**：支持静态网站的所有必要功能
+6. **国内服务**：完全国内托管，不受国际网络影响
+7. **一站式服务**：同时提供代码托管和网站部署功能
 
 ---
 
-## 步骤1：注册Gitee账号
+## 步骤1：注册Cloud Native Build账号
 
 ### 操作步骤：
 
-1. **访问Gitee官网**
-   - 打开浏览器，访问 [https://gitee.com/](https://gitee.com/)
+1. **访问Cloud Native Build官网**
+   - 打开浏览器，访问 [https://cnb.cool/](https://cnb.cool/)
 
 2. **注册账号**
    - 点击「注册」按钮
-   - 输入手机号码，获取验证码
-   - 设置密码
-   - 完成注册
-
-3. **登录账号**
-   - 使用注册的账号和密码登录
-
----
-
-## 步骤2：创建Gitee仓库
-
-### 操作步骤：
-
-1. **创建新仓库**
-   - 登录后，点击右上角的「+」按钮，选择「新建仓库」
-   - 填写仓库信息：
-     - **仓库名称**：输入 `tutorial-project`
-     - **描述**：输入「使用Solo Trae Web Code制作的网页教程项目」
-     - **仓库类型**：选择「公开」
-     - **初始化仓库**：勾选「使用README文件初始化仓库」
-   - 点击「创建」按钮
-
-2. **获取仓库地址**
-   - 进入仓库页面，复制仓库的HTTPS或SSH地址
-
----
-
-## 步骤3：将本地项目推送到Gitee
-
-### 在线方式（Solo Trae Web Code）：
-
-1. **添加远程仓库**
-   - 在Solo Trae Web Code的终端中执行：
-     ```bash
-     git remote add origin <Gitee仓库地址>
-     ```
-   - 将 `<Gitee仓库地址>` 替换为实际的仓库地址
-
-2. **推送代码**
-   ```bash
-   git push -u origin main
-   ```
-
-### 本地方式（可选）：
-
-1. **添加远程仓库**
-   ```bash
-   git remote add origin <Gitee仓库地址>
-   ```
-
-2. **推送代码**
-   ```bash
-   git push -u origin main
-   ```
-
----
-
-## 步骤4：注册Cloudflare账号
-
-### 操作步骤：
-
-1. **访问Cloudflare官网**
-   - 打开浏览器，访问 [https://www.cloudflare.com/](https://www.cloudflare.com/)
-
-2. **注册账号**
-   - 点击「Sign Up」按钮
    - 输入邮箱和密码
    - 完成注册
 
@@ -150,30 +88,34 @@
 
 ---
 
-## 步骤5：配置Cloudflare Pages
+## 步骤5：配置Cloud Native Build
 
 ### 操作步骤：
 
-1. **进入Pages**
-   - 登录后，点击左侧菜单中的「Pages」
-   - 点击「Create a Project」按钮
+1. **进入项目管理**
+   - 登录后，进入控制台
+   - 点击「创建项目」按钮
 
-2. **连接Gitee仓库**
-   - 选择「Connect to Git」
-   - 选择「Gitee」作为代码源
-   - 授权Cloudflare访问你的Gitee账号
-   - 选择 `tutorial-project` 仓库
+2. **创建新项目**
+   - **项目名称**：输入 `tutorial-project`
+   - **描述**：输入「使用Solo Trae Web Code制作的网页教程项目」
+   - **仓库类型**：选择「公开」
+   - 点击「创建」按钮
 
-3. **配置构建设置**
-   - **Project name**：保持默认或修改为你喜欢的名称
-   - **Production branch**：选择 `main`
-   - **Build settings**：
-     - **Framework preset**：选择「None」
-     - **Build command**：留空
-     - **Build output directory**：输入 `project`（因为我们的网页文件在project目录中）
+3. **上传项目文件**
+   - 进入项目页面，点击「上传文件」按钮
+   - 上传项目的所有文件，包括：
+     - `index.html`
+     - `css/style.css`
+     - `js/script.js`
+   - 或者使用Git推送代码到Cloud Native Build仓库
 
-4. **部署项目**
-   - 点击「Save and Deploy」按钮
+4. **配置构建设置**
+   - 进入项目设置
+   - **构建目录**：输入 `project`（因为我们的网页文件在project目录中）
+
+5. **部署项目**
+   - 点击「部署」按钮
    - 等待部署完成
 
 ---
@@ -183,8 +125,8 @@
 ### 操作步骤：
 
 1. **获取网站URL**
-   - 部署完成后，Cloudflare Pages会生成一个唯一的URL
-   - 格式通常为：`https://<project-name>.<username>.pages.dev`
+   - 部署完成后，Cloud Native Build会生成一个唯一的URL
+   - 格式通常为：`https://cnb.cool/<username>/<project-name>`
 
 2. **访问网站**
    - 打开浏览器，输入生成的URL
@@ -193,6 +135,12 @@
 3. **验证网站内容**
    - 确保所有页面和资源都能正常访问
    - 验证样式和脚本是否正常工作
+
+### 实际部署示例：
+
+我们的项目已成功部署到：
+- **部署地址**：[https://cnb.cool/slowdown87/tutorial-project](https://cnb.cool/slowdown87/tutorial-project)
+- **访问方式**：直接在浏览器中打开上述地址
 
 ---
 
@@ -205,16 +153,16 @@
 - **Issue跟踪**：使用Issue功能跟踪项目问题和任务
 - **Pull Request**：使用Pull Request进行代码审查和合并
 
-### 2. Cloudflare Pages使用技巧
+### 2. Cloud Native Build使用技巧
 
 - **自动部署**：配置自动部署，每次推送到main分支时自动更新网站
 - **自定义域名**：如果有域名，可以配置自定义域名
-- **环境变量**：使用环境变量管理敏感信息
 - **部署历史**：利用部署历史回滚到之前的版本
+- **访问统计**：查看网站访问统计数据
 
 ### 3. 联合使用技巧
 
-- **同步更新**：每次修改代码后，同时更新Gitee仓库和Cloudflare Pages
+- **同步更新**：每次修改代码后，同时更新Gitee仓库和Cloud Native Build
 - **版本控制**：使用Git标签标记重要版本
 - **备份策略**：定期备份代码和部署配置
 - **监控网站**：定期检查网站的访问状态和性能
@@ -226,44 +174,39 @@
 ### Q: Gitee和GitHub有什么区别？
 **A:** Gitee是国内的代码托管平台，访问速度快，适合国内用户；GitHub是国际平台，社区更活跃，资源更丰富。
 
-### Q: Cloudflare Pages在国内访问速度如何？
-**A:** Cloudflare Pages使用全球CDN加速，国内访问速度非常快，比GitHub Pages快很多。
+### Q: Cloud Native Build在国内访问速度如何？
+**A:** Cloud Native Build是国内服务，访问速度非常快，完全不受国际网络影响。
 
 ### Q: 如何配置自定义域名？
-**A:** 在Cloudflare Pages的项目设置中，添加自定义域名，然后在域名提供商处配置DNS记录。
+**A:** 在Cloud Native Build的项目设置中，添加自定义域名，然后在域名提供商处配置DNS记录。
 
 ### Q: 部署失败怎么办？
-**A:** 检查构建配置是否正确，特别是构建输出目录是否指向正确的目录。查看部署日志，了解具体的错误信息。
+**A:** 检查构建配置是否正确，特别是构建目录是否指向正确的目录。查看部署日志，了解具体的错误信息。
 
 ### Q: 如何回滚到之前的版本？
-**A:** 在Cloudflare Pages的部署历史中，找到之前的成功部署，点击「Rollback」按钮。
+**A:** 在Cloud Native Build的部署历史中，找到之前的成功部署，点击「回滚」按钮。
 
 ---
 
 ## 练习时间！
 
-### 练习1：注册Gitee账号
-1. 访问Gitee官网并注册账号
+### 练习1：注册Cloud Native Build账号
+1. 访问Cloud Native Build官网并注册账号
 2. 登录账号并熟悉界面
 
-### 练习2：创建Gitee仓库
-1. 创建一个名为 `tutorial-project` 的仓库
-2. 获取仓库地址
+### 练习2：创建Cloud Native Build项目
+1. 创建一个名为 `tutorial-project` 的项目
+2. 熟悉项目管理界面
 
-### 练习3：推送代码到Gitee
-1. 将本地项目推送到Gitee仓库
-2. 验证代码是否成功推送
+### 练习3：上传项目文件
+1. 上传项目的所有文件到Cloud Native Build
+2. 或者使用Git推送代码到Cloud Native Build仓库
 
-### 练习4：注册Cloudflare账号
-1. 访问Cloudflare官网并注册账号
-2. 登录账号并熟悉界面
+### 练习4：配置Cloud Native Build
+1. 配置构建目录为 `project`
+2. 部署项目
 
-### 练习5：配置Cloudflare Pages
-1. 连接Gitee仓库
-2. 配置构建设置
-3. 部署项目
-
-### 练习6：访问部署的网站
+### 练习5：访问部署的网站
 1. 获取网站URL
 2. 访问网站并验证内容
 
@@ -275,9 +218,8 @@
 
 ✅ 为什么需要国内替代方案
 ✅ 如何评估和选择国内替代方案
-✅ 如何注册和使用Gitee作为代码托管平台
-✅ 如何注册和使用Cloudflare Pages作为部署平台
-✅ 如何将项目部署到Cloudflare Pages
+✅ 如何注册和使用Cloud Native Build作为一站式代码托管和部署平台
+✅ 如何将项目部署到Cloud Native Build
 ✅ 国内替代方案的使用最佳实践和常见问题的解决方法
 
 **现在你已经掌握了国内替代方案的使用方法，为项目的部署和发布做好了准备！**
