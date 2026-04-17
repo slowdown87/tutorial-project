@@ -1,0 +1,10 @@
+main:
+  build:
+    - stages:
+        - name: build
+          script: echo "Building static site"
+  deploy:
+    - name: deploy
+      script: echo "Deploying static site"
+      artifact: project/
+      website: true
