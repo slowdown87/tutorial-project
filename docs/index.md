@@ -5,26 +5,25 @@
 ## 📚 教程目录
 
 ### 第1章：初识Solo Trae Web版
-- [1.1 什么是Solo Trae Web Code？](chapter01/section01.md)
-- [1.2 环境准备](chapter01/section02.md)
-- [1.3 界面介绍与基本操作](chapter01/section03.md)
+- [1.1 什么是Solo Trae Web Code？](chapter01/section01-what-is-solo-trae.md)
+- [1.2 环境准备](chapter01/section02-environment-setup.md)
+- [1.3 界面介绍与基本操作](chapter01/section03-how-to-use-solo-trae.md)
+- [1.4 如何与AI有效交流（零基础指南）](chapter01/section04-effective-ai-communication.md)
 
 ### 第2章：需求分析与规划
-- [2.1 明确我们的目标](chapter02/section01.md)
-- [2.2 方案选择：为什么需要国内替代？](chapter02/section02.md)
-- [2.3 项目架构设计](chapter02/section03.md)
+- [2.1 明确我们的目标](chapter02/section01-define-goals.md)
+- [2.2 方案选择：为什么需要国内替代？](chapter02/section02-domestic-alternative.md)
 
 ### 第3章：项目初始化
-- [3.1 创建项目目录结构](chapter03/section01.md)
-- [3.2 初始化Git仓库](chapter03/section02.md)
-- [3.3 创建基础配置文件](chapter03/section03.md)
+- [3.1 项目初始化步骤](chapter03/section01-project-init.md)
+- [3.2 项目配置与设置](chapter03/section02-project-config.md)
 
 ### 第4章：国内替代方案选择与配置
-- [4.1 为什么需要国内替代方案？](chapter04/section01.md)
-- [4.2 Cloud Native Build（cnb.cool）介绍](chapter04/section02.md)
-- [4.3 cnb.cool账号注册与仓库创建](chapter04/section03.md)
-- [4.4 访问令牌创建与Git配置](chapter04/section04.md)
-- [4.5 代码推送与部署](chapter04/section05.md)
+- [4.1 为什么需要国内替代方案？](chapter04/section01-why-domestic-alternative.md)
+- [4.2 Cloud Native Build（cnb.cool）介绍](chapter04/section02-cnb-intro.md)
+- [4.3 cnb.cool账号注册与仓库创建](chapter04/section03-cnb-register-repo.md)
+- [4.4 访问令牌创建与Git配置](chapter04/section04-access-token-git.md)
+- [4.5 代码推送与部署](chapter04/section05-push-deploy.md)
 
 ### 第5章：同步教程生成机制
 - [5.1 什么是同步教程生成？](chapter05/section01.md)
@@ -104,7 +103,7 @@
 
 ## 🎉 让我们开始吧！
 
-准备好了吗？让我们从[第1章：初识Solo Trae Web版](chapter01/section01.md)开始！
+准备好了吗？让我们从[第1章：初识Solo Trae Web版](chapter01/section01-what-is-solo-trae.md)开始！
 
 ---
 

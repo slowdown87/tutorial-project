@@ -68,25 +68,25 @@ Gitee是我们选择的国内Git托管平台。
 - 🇨🇳 中文界面友好
 - 📚 功能全面
 
-**如何注册？** 别担心，我们在[第4章](../chapter04/section02.md)会详细讲解！
+**如何注册？** 别担心，我们在[第4章](../chapter04/section02-cnb-intro.md)会详细讲解！
 
-现在你只需要知道：我们需要一个Gitee账号就可以了。
+现在你只需要知道：我们需要一个cnb.cool账号就可以了。
 
 ---
 
-### 5. Cloudflare账号（免费）
+### 5. cnb.cool账号（免费）
 
-Cloudflare Pages是我们选择的静态网站托管服务。
+cnb.cool是我们选择的一站式代码托管和静态网站托管服务。
 
-**为什么选择Cloudflare Pages？**
-- 🌍 全球CDN，国内访问也不错
+**为什么选择cnb.cool？**
+- 🏠 完全国内服务，访问速度快
 - 🆓 完全免费
 - ⚡ 速度快且稳定
-- 🔒 自动HTTPS
+- 🔒 一站式服务，代码托管和网站部署在一起
 
-**如何注册？** 同样，我们在[第4章](../chapter04/section03.md)会详细讲解！
+**如何注册？** 同样，我们在[第4章](../chapter04/section03-cnb-register-repo.md)会详细讲解！
 
-现在你只需要知道：我们需要一个Cloudflare账号就可以了。
+现在你只需要知道：我们需要一个cnb.cool账号就可以了。
 
 ---
 
@@ -131,4 +131,4 @@ Solo Trae Web Code会帮我们处理这些复杂的事情！
 
 ## 下一步
 
-工具清单已经了解了！接下来，让我们学习[如何打开和使用Solo Trae Web Code](section03.md)！
+工具清单已经了解了！接下来，让我们学习[如何打开和使用Solo Trae Web Code](section03-how-to-use-solo-trae.md)！

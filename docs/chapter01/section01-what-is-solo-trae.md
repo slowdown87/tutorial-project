@@ -88,4 +88,4 @@ Solo Trae Web Code有很多出色的特点：
 
 ## 下一步
 
-现在我们已经认识了Solo Trae Web Code，接下来让我们进行[环境准备](section02.md)！
+现在我们已经认识了Solo Trae Web Code，接下来让我们进行[环境准备](section02-environment-setup.md)！

@@ -135,4 +135,4 @@
 
 ## 下一步
 
-方案已经确定，接下来让我们进行[第3章：项目初始化](file:///workspace/tutorial-project/docs/chapter03/section01.md)！
+方案已经确定，接下来让我们进行[第3章：项目初始化](../chapter03/section01-project-init.md)！

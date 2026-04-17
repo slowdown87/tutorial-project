@@ -117,4 +117,4 @@ cnb.cool内置了静态网站托管功能：
 
 ---
 
-**下一步**：让我们进入[4.3 cnb.cool账号注册与仓库创建](section03.md)，开始使用cnb.cool！
+**下一步**：让我们进入[4.3 cnb.cool账号注册与仓库创建](section03-cnb-register-repo.md)，开始使用cnb.cool！
