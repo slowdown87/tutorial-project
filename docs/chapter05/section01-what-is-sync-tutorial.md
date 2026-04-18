@@ -178,4 +178,4 @@
 
 ---
 
-**下一步**：让我们进入[5.2 目录结构设计](section02-directory-structure.md)，学习如何设计合理的目录结构来组织教程内容！
+**下一步**：让我们进入[5.2 目录结构设计](section02-directory-structure.html)，学习如何设计合理的目录结构来组织教程内容！

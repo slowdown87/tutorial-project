@@ -171,4 +171,4 @@
 
 ## 下一步
 
-目标已经明确，接下来让我们进行[方案选择：为什么需要国内替代？](section02-domestic-alternative.md)！
+目标已经明确，接下来让我们进行[方案选择：为什么需要国内替代？](section02-domestic-alternative.html)！

@@ -209,4 +209,4 @@
 
 ---
 
-**下一步**：让我们进入[4.4 推送代码到GitHub](section04-access-token-git.md)，学习如何将本地代码推送到GitHub仓库！
+**下一步**：让我们进入[4.4 推送代码到GitHub](section04-access-token-git.html)，学习如何将本地代码推送到GitHub仓库！

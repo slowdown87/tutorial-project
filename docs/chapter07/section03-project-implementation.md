@@ -609,4 +609,4 @@ document.addEventListener("DOMContentLoaded", function() {
 
 ---
 
-**下一步**：让我们进入[8.1 部署准备](section01-deployment-preparation.md)，开始准备项目部署！
+**下一步**：让我们进入[8.1 部署准备](section01-deployment-preparation.html)，开始准备项目部署！

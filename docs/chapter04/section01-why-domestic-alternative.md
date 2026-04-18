@@ -136,4 +136,4 @@
 
 ---
 
-**下一步**：让我们进入[4.2 GitHub Pages 介绍](section02-cnb-intro.md)，了解我们最终选择的平台！
+**下一步**：让我们进入[4.2 GitHub Pages 介绍](section02-cnb-intro.html)，了解我们最终选择的平台！

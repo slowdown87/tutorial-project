@@ -117,4 +117,4 @@ GitHub Pages支持多种部署方式：
 
 ---
 
-**下一步**：让我们进入[4.3 GitHub仓库创建与配置](section03-cnb-register-repo.md)，开始使用GitHub Pages！
+**下一步**：让我们进入[4.3 GitHub仓库创建与配置](section03-cnb-register-repo.html)，开始使用GitHub Pages！

@@ -309,4 +309,4 @@ main:
 
 ---
 
-**下一步**：让我们进入[6.3 截图技巧与规范](section03-screenshot-techniques.md)，学习如何进行有效的截图！
+**下一步**：让我们进入[6.3 截图技巧与规范](section03-screenshot-techniques.html)，学习如何进行有效的截图！

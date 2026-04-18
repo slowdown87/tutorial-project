@@ -8,11 +8,11 @@
 
 | 文件名 | 描述 |
 |--------|------|
-| [structure.md](structure.md) | 教程整体结构设计 |
-| [capture-plan.md](capture-plan.md) | 项目制作过程捕获方案 |
-| [sync-mechanism.md](sync-mechanism.md) | 教程与项目同步机制 |
-| [github-publish.md](github-publish.md) | GitHub发布流程 |
-| [implementation-guide.md](implementation-guide.md) | 实施指南 |
+| [structure.md](structure.html) | 教程整体结构设计 |
+| [capture-plan.md](capture-plan.html) | 项目制作过程捕获方案 |
+| [sync-mechanism.md](sync-mechanism.html) | 教程与项目同步机制 |
+| [github-publish.md](github-publish.html) | GitHub发布流程 |
+| [implementation-guide.md](implementation-guide.html) | 实施指南 |
 
 ## 使用说明
 

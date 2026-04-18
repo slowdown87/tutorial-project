@@ -242,4 +242,4 @@ Closes #1
 
 ---
 
-**下一步**：让我们进入[第6章：制作教程内容](../chapter06/section01-tutorial-structure.md)，学习如何制作高质量的教程内容！
+**下一步**：让我们进入[第6章：制作教程内容](../chapter06/section01-tutorial-structure.html)，学习如何制作高质量的教程内容！

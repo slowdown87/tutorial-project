@@ -261,4 +261,4 @@
 
 ---
 
-**下一步**：让我们进入[8.2 项目部署](section02-project-deployment.md)，开始部署项目！
+**下一步**：让我们进入[8.2 项目部署](section02-project-deployment.html)，开始部署项目！

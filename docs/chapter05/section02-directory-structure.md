@@ -240,4 +240,4 @@ tutorial-project/
 
 ---
 
-**下一步**：让我们进入[5.3 Git工作流](section03-git-workflow.md)，学习如何使用Git进行版本控制和协作！
+**下一步**：让我们进入[5.3 Git工作流](section03-git-workflow.html)，学习如何使用Git进行版本控制和协作！

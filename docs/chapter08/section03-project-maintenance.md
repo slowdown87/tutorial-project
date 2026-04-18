@@ -314,4 +314,4 @@
 
 ---
 
-**下一步**：让我们进入[9.1 项目总结](section01-project-summary.md)，总结整个项目的开发过程！
+**下一步**：让我们进入[9.1 项目总结](section01-project-summary.html)，总结整个项目的开发过程！

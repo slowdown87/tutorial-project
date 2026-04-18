@@ -382,4 +382,4 @@ tutorial-project/
 
 ---
 
-**下一步**：让我们进入[第4章：国内替代方案选择](../chapter04/section01-why-domestic-alternative.md)，学习如何选择和使用国内的替代方案！
+**下一步**：让我们进入[第4章：国内替代方案选择](../chapter04/section01-why-domestic-alternative.html)，学习如何选择和使用国内的替代方案！

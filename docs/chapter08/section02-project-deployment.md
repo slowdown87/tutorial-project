@@ -271,4 +271,4 @@ git push cnb main
 
 ---
 
-**下一步**：让我们进入[8.3 项目维护与更新](section03-project-maintenance.md)，学习如何维护和更新项目！
+**下一步**：让我们进入[8.3 项目维护与更新](section03-project-maintenance.html)，学习如何维护和更新项目！
